@@ -19,5 +19,8 @@ module.exports = {
   },
   plugins: [
     htmlPlugin
-  ]
+  ],
+  devServer: {
+    open: true
+  }
 };
