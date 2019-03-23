@@ -1,0 +1,28 @@
+{
+  "name": "goodidea-react-track",
+  "version": "1.0.0",
+  "description": "- 希望你能學會用 React (廢話) - 希望你能習慣讀官方文件 - 希望你學習後能習慣回答三個問題   - 他在什麼情況或架構適用？   - 他擔任什麼角色？   - 有什麼其他選擇，那你會選哪個用，why？",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PenguinRun/goodidea-react-track.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PenguinRun/goodidea-react-track/issues"
+  },
+  "homepage": "https://github.com/PenguinRun/goodidea-react-track#readme",
+  "dependencies": {
+    "terser": "^3.17.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "babel-preset-react-app": "^7.0.2"
+  }
+}

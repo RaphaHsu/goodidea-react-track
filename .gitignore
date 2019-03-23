@@ -1,0 +1,5 @@
+# ignore module
+node_modules
+
+# MAC
+.DS_Store
