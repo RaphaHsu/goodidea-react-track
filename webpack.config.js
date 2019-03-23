@@ -1,10 +1,11 @@
+/* eslint-disable no-undef */
 const path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   context: path.resolve('src/'),
   entry: {
-    client: './index.js'
+    client: './index.jsx'
   },
   module: {
     rules: [

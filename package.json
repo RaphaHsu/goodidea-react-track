@@ -7,14 +7,18 @@
   "license": "MIT",
   "scripts": {
     "start": "./node_modules/.bin/webpack-dev-server",
-    "build": "./node_modules/.bin/cross-env NODE_ENV=production ./node_modules/.bin/webpack --mode=production"
+    "build": "./node_modules/.bin/cross-env NODE_ENV=production ./node_modules/.bin/webpack --mode=production",
+    "lint": "./node_modules/.bin/eslint src --ext jsx --ext js"
   },
   "devDependencies": {
     "@babel/core": "^7.4.0",
     "@babel/preset-env": "^7.4.2",
     "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.5",
     "cross-env": "^5.2.0",
+    "eslint": "^5.15.3",
+    "eslint-plugin-react": "^7.12.4",
     "html-webpack-plugin": "^3.2.0",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
