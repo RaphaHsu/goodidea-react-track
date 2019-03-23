@@ -1,0 +1,8 @@
+{
+  "name": "goodidea-react-track",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:oscar60310/goodidea-react-track.git",
+  "author": "Ivan Tsai <oscar60310@gmail.com>",
+  "license": "MIT"
+}
