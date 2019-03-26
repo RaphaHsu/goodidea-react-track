@@ -1,0 +1,19 @@
+{
+  "name": "goodidea-react-track",
+  "version": "1.0.0",
+  "description": "- 希望你能學會用 React (廢話) - 希望你能習慣讀官方文件 - 希望你學習後能習慣回答三個問題   - 他在什麼情況或架構適用？   - 他擔任什麼角色？   - 有什麼其他選擇，那你會選哪個用，why？",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mark9462/goodidea-react-track.git"
+  },
+  "author": "Jimmy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mark9462/goodidea-react-track/issues"
+  },
+  "homepage": "https://github.com/mark9462/goodidea-react-track#readme"
+}
