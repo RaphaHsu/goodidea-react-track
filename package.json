@@ -1,0 +1,18 @@
+{
+  "name": "goodidea-react-track",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PenguinRun/goodidea-react-track.git"
+  },
+  "author": "PenguinRun <shanban820@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PenguinRun/goodidea-react-track/issues"
+  },
+  "homepage": "https://github.com/PenguinRun/goodidea-react-track#readme"
+}
