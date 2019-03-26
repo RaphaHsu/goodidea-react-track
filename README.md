@@ -7,15 +7,14 @@
 2. 開啟專案
 `cd env-test`
 
-3. 確認 npm 版本
-`npm -v`
-若沒有請下載
-`npm install`
+3. `npm install`
 
-4. 開啟專案
+4. `npm audit fix`
+
+5. 開啟專案
 `npm start`
 終端機會出現 http://localhost:3000
-瀏覽器上輸入這個網址即可打開。
+瀏覽器會自動打開，或是在特定瀏覽器輸入這個網址也可打開。
 
-5. Production
+6. Production
 `npm run build`

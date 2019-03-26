@@ -4,6 +4,8 @@
 1. 在終端機中輸入
 `git clone git@github.com:oklalala/goodidea-react-track.git`
 
+
+
 2. `npm install`
 
 3. `npm audit fix`
