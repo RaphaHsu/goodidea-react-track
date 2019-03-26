@@ -14,5 +14,11 @@
   "bugs": {
     "url": "https://github.com/PenguinRun/goodidea-react-track/issues"
   },
-  "homepage": "https://github.com/PenguinRun/goodidea-react-track#readme"
+  "homepage": "https://github.com/PenguinRun/goodidea-react-track#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/preset-react": "^7.0.0"
+  }
 }
