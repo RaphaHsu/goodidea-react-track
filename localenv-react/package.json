@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack": "webpack",
+    "webpack": "NODE_ENV=production webpack",
     "start": "webpack-dev-server --open"
   },
   "keywords": [],
