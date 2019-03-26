@@ -1,10 +1,13 @@
 {
   "name": "goodidea-react-track",
   "version": "1.0.0",
-  "description": "- 希望你能學會用 React (廢話) - 希望你能習慣讀官方文件 - 希望你學習後能習慣回答三個問題   - 他在什麼情況或架構適用？   - 他擔任什麼角色？   - 有什麼其他選擇，那你會選哪個用，why？",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "repository": {
     "type": "git",
@@ -21,15 +24,19 @@
     "@babel/core": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.2",
-    "css-loader": "^1.0.0",
-    "style-loader": "^0.23.0",
     "webpack": "^4.19.1",
     "webpack-cli": "^3.1.1",
     "webpack-dev-server": "^3.1.8"
   },
   "dependencies": {
     "react": "^16.8.5",
-    "react-dom": "^16.8.5"
-  }
+    "react-dom": "^16.8.5",
+    "react-scripts": "^2.1.8"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
