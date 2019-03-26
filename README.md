@@ -83,7 +83,7 @@
 
   ### React
 
-- `$npm install react react-dom`
+- `$npm install react react-dom react-scripts`
 
 - 接著我們創建一個 `public` 資料夾，創立一個 `index.html`
 
