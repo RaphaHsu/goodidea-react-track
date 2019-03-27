@@ -1,10 +1,8 @@
-function component() {
-  let element = document.createElement('div');
+import ReactDOM from 'react-dom';
+import React from 'react';
+import HelloMessage from './HelloMessage'
 
-  // Lodash, currently included via a script, is required for this line to work
-  element.innerHTML = ['Hello', 'webpack'].join(", ");
-
-  return element;
-}
-
-document.body.appendChild(component());
+ReactDOM.render(
+  <HelloMessage name="Chris" />,
+  document.getElementById('root')
+);
