@@ -2,10 +2,15 @@
   "name": "react-init",
   "version": "1.0.0",
   "description": "react first hand",
-  "main": "index.js",
+  "private": true,
   "scripts": {
+    "dev": "webpack --mode=development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "chris",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
+  }
 }
