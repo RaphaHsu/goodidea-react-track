@@ -1,5 +1,23 @@
 # 建立專案手打麵
 
+## 使用
+
+- `npm run build` 建置佈署檔
+- `npm run dev` 開發模式，頁面出現在 [http://localhost:8080](http://localhost:8080)
+
+## 目錄
+
+- **build** webpack config files
+- **public** 靜態頁面檔，目前放置首頁模版檔 index.HtmlWebpackPlugin
+- **src** source code，放置執行 react 的檔案。
+
+## 檔案
+
+- .babelrc 設定 babel 的地方
+- .browserslistrc 設定瀏覽器支援度的地方，babel 的 preset-env 要設定。
+
+# 創建步驟
+
 ## 安裝 webpack
 
 ```shell
