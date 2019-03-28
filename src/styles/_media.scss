@@ -1,1 +1,29 @@
-.media {}
+.media {
+  height: calc(100vh - 80px);
+  background-image: url('../images/cover.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+
+  .title-container {
+    width: fit-content;
+    background: rgba(232, 232, 232, 0.6);
+
+    button {
+      outline: none;
+      border: none;
+      background: #212121;
+      color: white;
+    }
+    .title{
+      letter-spacing: 2;
+    }
+  }
+
+  .description {
+    flex: 0 0 50px;
+    background: rgba(232, 232, 232, 0.6);
+    letter-spacing: 2;
+  }
+}
