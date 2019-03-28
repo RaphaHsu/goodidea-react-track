@@ -1,1 +1,36 @@
-.footer{}
+.footer {
+  background: #525252;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &>div {
+    margin: 20px;
+    color: white;
+
+    &>div:nth-child(1) {
+      color: #cecece;
+    }
+  }
+
+  .sub-input {
+    width: 300px;
+    background: #525252;
+    color: white;
+
+    &::placeholder {
+      color: white;
+    }
+
+    border: solid 1px white;
+    padding: 5px;
+  }
+
+  .sub-btn {
+    padding: 5px 10px;
+    margin-top: 5px;
+    outline: none;
+    border: none;
+  }
+}
