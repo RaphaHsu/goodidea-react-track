@@ -19,6 +19,14 @@ module.exports = {
         test: /\.scss$/,
         loader: 'style-loader!css-loader!sass-loader',
       },
+      {
+        test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
+        loader: 'url-loader',
+        query: {
+          limit: 10000,
+          name: 'static/media/[name].[hash:8].[ext]',
+        },
+      },
     ]
   },
   output: {
