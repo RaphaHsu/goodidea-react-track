@@ -1,1 +1,11 @@
-.slogan {}
+.slogan {
+  .l1 {
+    letter-spacing: 15px;
+    font-weight: 600;
+  }
+  .dash{
+    width: 30px;
+    height: 1px;
+    background: black;
+  }
+}
