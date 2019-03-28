@@ -7,6 +7,9 @@ module.exports = {
   entry: {
     client: './index.jsx'
   },
+  resolve: {
+    extensions: ['.js','.jsx']
+  },
   module: {
     rules: [
       {

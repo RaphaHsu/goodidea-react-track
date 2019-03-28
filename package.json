@@ -6,7 +6,7 @@
   "author": "Ivan Tsai <oscar60310@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "./node_modules/.bin/webpack-dev-server",
+    "start": "./node_modules/.bin/webpack-dev-server --hot",
     "build": "./node_modules/.bin/cross-env NODE_ENV=production ./node_modules/.bin/webpack --mode=production",
     "lint": "./node_modules/.bin/eslint src --ext jsx --ext js"
   },
@@ -23,14 +23,16 @@
     "html-webpack-plugin": "^3.2.0",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
+    "react-hot-loader": "^4.8.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",
-    "webpack-dev-server": "^3.2.1"
-  },
-  "dependencies": {
+    "webpack-dev-server": "^3.2.1",
     "node-sass": "^4.11.0",
     "url-loader": "^1.1.2"
+  },
+  "dependencies": {
+
   }
 }
