@@ -8,7 +8,8 @@
   &>div {
     margin: 20px;
     color: white;
-
+    height: 150px;
+    justify-content: flex-start;
     &>div:nth-child(1) {
       color: #cecece;
     }
