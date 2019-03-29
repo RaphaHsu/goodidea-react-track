@@ -6,9 +6,12 @@ class Header extends Component{
    return(
      <header>
        <div class="logo"></div>
+       <nav>
+         <a href="#">Home</a>
+       </nav>
      </header>
    );
  }
 }
 
-export default App;
+export default Header;
