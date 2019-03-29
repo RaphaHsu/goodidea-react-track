@@ -19,20 +19,22 @@ header {
       width: 70%;
       justify-content: space-between;
       align-items: center;
-      li{
-        a {
-           color: #D3D3D3;
-           font-size: 20px;
-           font-family: sans-serif;
-           &:hover {
-              color: white;
-           }
-        }
-        .shoppingCart{
-          background-image: url("../static/images/social.png");
-          height: 30px;
-          width: 30px;
-        }
+      li {
+         a {
+            color: #D3D3D3;
+            font-size: 20px;
+            font-family: sans-serif;
+            &:hover {
+               color: white;
+            }
+         }
+         .shoppingCart {
+            background-image: url("../static/images/shoppingbag.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: 40px;
+            width: 40px;
+         }
       }
    }
 }
