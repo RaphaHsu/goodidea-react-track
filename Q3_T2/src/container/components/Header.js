@@ -1,5 +1,5 @@
 import React, { Component} from "react";
-// import "./App.css";
+import "../../styles/header.scss"
 
 class Header extends Component{
  render(){
@@ -7,7 +7,12 @@ class Header extends Component{
      <header>
        <div class="logo"></div>
        <nav>
-         <a href="#">Home</a>
+          <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">Sale</a>
+      <a href="#">Customer</a>
+
+
        </nav>
      </header>
    );
