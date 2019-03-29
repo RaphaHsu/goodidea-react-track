@@ -1,19 +1,15 @@
-## React Track 要幹嘛？
+# Static website practice with React
+A simple React project with sass-loader and url-loader
 
-- 希望你能學會用 React (廢話)
-- 希望你能習慣讀官方文件
-- 希望你學習後能習慣回答三個問題
-  - 他在什麼情況或架構適用？
-  - 他擔任什麼角色？
-  - 有什麼其他選擇，那你會選哪個用，why？
+# Requirement
+- node
+- yarn
 
-## 玩法？
+# Getting Started
+- Install packages
+  
+  Run `yarn`
+- Start development server
 
-- 為期兩個月
-- 每週至少兩題 React 實用情境讓你玩
-- 不是手把手課程，沒有固定教材或影片教學，偏向自發性讀書會
-- 透過 Github Issue 發表當週情境，透過指定的繳交方式遞交成果 (PR, Issue Comment, etc.)
-- 每週二文件導讀
-- 每週一抓起碼三則上週 PR 來討論，評估優缺，對事不對人
-- 有問題歡迎來問，但建議你先整理好問題和解說 (整理問題的過程，有時就回答你自己問題了)
-
+  Run `yarn start`
+- Open http://localhost:8080
