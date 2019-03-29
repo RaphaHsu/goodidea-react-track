@@ -3,28 +3,35 @@ header {
    display: flex;
    justify-content: center;
    .header_container {
-      padding: 30px 0;
+      padding: 35px 0;
       justify-content: space-between;
    }
    .logo {
-     background-image: url("../static/images/logo.png");
-      // color: #D2D2D2;
-      // font-family: sans-serif;
-      // font-size: 28px;
-      // font-weight: bold;
-      // letter-spacing: 9px;
+      width: 25%;
+      color: #D2D2D2;
+      font-family: sans-serif;
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 9px;
    }
    nav {
       display: flex;
+      width: 70%;
+      justify-content: space-between;
+      align-items: center;
       li{
-        margin-left: 20px;
         a {
            color: #D3D3D3;
-           font-size: 22px;
+           font-size: 20px;
            font-family: sans-serif;
            &:hover {
               color: white;
            }
+        }
+        .shoppingCart{
+          background-image: url("../static/images/social.png");
+          height: 30px;
+          width: 30px;
         }
       }
    }

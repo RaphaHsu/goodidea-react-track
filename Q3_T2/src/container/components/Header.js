@@ -22,6 +22,9 @@ class Header extends Component {
           <li>
             <a href="">Stockists</a>
           </li>
+          <li>
+            <div class="shoppingCart"></div>
+          </li>
         </nav>
       </div>
     </header>);
