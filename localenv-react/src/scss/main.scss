@@ -1,6 +1,5 @@
-body {
-  div#root{
-    background-color: #222;
-    color: #8EE4AF;
-  }
-}
+@import "minix";
+@import "component/NavBar";
+@import "component/Banner";
+@import "component/Content";
+@import "component/Footer";
