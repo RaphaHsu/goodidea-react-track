@@ -1,6 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import NavBar from "./NavBar.js"
 
 export default function() {
-  return <h1> Hello, I am here </h1>
+  return (
+    <NavBar/>
+  )
 }
