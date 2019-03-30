@@ -15,4 +15,4 @@ $cd Q3_T2
 $npm install
 $npm start
 ```
-[說明檔](https://hackmd.io/c-SFhTqhTXS3eTEkubAMdg?edit)
+[Q3說明檔](https://hackmd.io/c-SFhTqhTXS3eTEkubAMdg?edit)
