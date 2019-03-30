@@ -12,7 +12,7 @@ header {
       font-family: sans-serif;
       font-size: 28px;
       font-weight: bold;
-      letter-spacing: 9px;
+      letter-spacing: 8px;
    }
    nav {
       display: flex;
@@ -34,6 +34,10 @@ header {
             background-repeat: no-repeat;
             height: 40px;
             width: 40px;
+            cursor: pointer;
+            &:hover{
+              opacity: 0.8;
+            }
          }
       }
    }
