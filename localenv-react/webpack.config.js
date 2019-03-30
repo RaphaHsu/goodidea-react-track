@@ -15,6 +15,15 @@ module.exports = {
       test: /\.(js|jsx)$/,
       exclude: /node_modules/,
       use: ['babel-loader']
+    }, {
+      test: /\.(css|scss)$/,
+      use: ["style-loader", // creates style nodes from JS strings
+        "css-loader", // translates CSS into CommonJS
+        "sass-loader" // compiles Sass to CSS, using Node Sass by default
+      ]
+    }, {
+      test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
+      loaders: ['file-loader']
     }]
   },
   devServer: {
