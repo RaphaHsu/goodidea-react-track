@@ -1,19 +1,30 @@
-## React Track 要幹嘛？
+# React 建立開發環境練習
 
-- 希望你能學會用 React (廢話)
-- 希望你能習慣讀官方文件
-- 希望你學習後能習慣回答三個問題
-  - 他在什麼情況或架構適用？
-  - 他擔任什麼角色？
-  - 有什麼其他選擇，那你會選哪個用，why？
+## 環境需求
 
-## 玩法？
++ node: `^8.9.3`
++ npm: `^6.8.0`
 
-- 為期兩個月
-- 每週至少兩題 React 實用情境讓你玩
-- 不是手把手課程，沒有固定教材或影片教學，偏向自發性讀書會
-- 透過 Github Issue 發表當週情境，透過指定的繳交方式遞交成果 (PR, Issue Comment, etc.)
-- 每週二文件導讀
-- 每週一抓起碼三則上週 PR 來討論，評估優缺，對事不對人
-- 有問題歡迎來問，但建議你先整理好問題和解說 (整理問題的過程，有時就回答你自己問題了)
+## 使用方式
 
+```sh
+$ git clone https://github.com/PenguinRun/goodidea-react-track.git
+$ cd goodidea-react-track
+$ npm install
+```
+
+| 指令 | 說明                                                                         |
+|--------------------|----------------------------------------------------------------------------|
+| `npm start`        | 啟動網站在`3000`port                                                         |
+| `npm run deploy`   | 將整個專案打包到`dist`資料夾底下 |
+
+## 參考資料
++ [react](https://github.com/facebook/react)
++ [react docs](https://reactjs.org/docs/getting-started.html)
++ [simple_react_startkit](https://github.com/ReactMaker/simple_react_startkit)
++ [html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin#minification)
++ [react-hot-loader](https://github.com/gaearon/react-hot-loader)
+
+## 附註，若藉由其他線上編譯平台建立可參考
++ [codesandbox](https://codesandbox.io/embed/mmwq5jzx7j?fontsize=14)
++ [stackblitz](https://stackblitz.com/edit/react-ejvkzb?embed=1&file=index.js)
