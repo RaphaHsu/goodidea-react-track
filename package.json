@@ -1,0 +1,19 @@
+{
+  "name": "goodidea-react-track_askie",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/askiebaby/goodidea-react-track.git"
+  },
+  "author": "Askie Lin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/askiebaby/goodidea-react-track/issues"
+  },
+  "homepage": "https://github.com/askiebaby/goodidea-react-track#readme"
+}
