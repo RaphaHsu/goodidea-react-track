@@ -1,12 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "main.scss";
+import App from "component/App.js"
+import "scss/main.scss";
 
-let HelloWorld = function() {
-  return <h1> Hello, I am here </h1>
-}
 
 ReactDOM.render(
-  <HelloWorld/>,
+  <App/>,
   document.getElementById("root")
 );
