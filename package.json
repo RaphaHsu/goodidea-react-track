@@ -22,7 +22,9 @@
     "webpack-dev-server": "^3.2.1"
   },
   "dependencies": {
+    "node-sass": "^4.11.0",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "sass-loader": "^7.1.0"
   }
 }
