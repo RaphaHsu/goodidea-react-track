@@ -1,0 +1,45 @@
+header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  background-color: #525050;
+  align-items: center;
+  .logo {
+    color: #D2D2D2;
+    font-size: 20px;
+    line-height: 80px;
+    letter-spacing: 8px;
+    font-weight: 800;
+    width:25%;
+    cursor: pointer;
+  }
+  .shoppingCart{
+    height: 30px;
+    width: 30px;
+    padding-left:35px;
+    &:hover{
+      opacity: 0.8;
+    }
+  }
+}
+
+.navbar {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  li {
+    display: inline-block;
+    color: #bdbcbc;
+    font-size: 13px;
+    margin: 0 30px;
+  }
+  li:hover{
+    cursor: pointer;
+    color: white;
+  }
+}
+
+
+
