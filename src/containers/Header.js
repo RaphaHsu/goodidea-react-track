@@ -4,7 +4,7 @@ import bag from '../images/car.png';
 const Header = () => (
   <div className="header">
     <div className="block">
-      <div className="icon">P R E T T Y&nbsp;&nbsp;&nbsp;G A L</div>
+      <div className="icon">PRETTY GAL</div>
       <button className="button" type="button">Home</button>
       <button className="button" type="button">Shop</button>
       <button className="button" type="button">Sale</button>

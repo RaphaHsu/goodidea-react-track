@@ -1,0 +1,13 @@
+.section {
+  margin-top: 70px;
+  .block {
+    .product-list {
+      padding-top: 30px;
+      padding-bottom: 60px;
+      margin-left: 380px;
+      margin-right: 380px;
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+}

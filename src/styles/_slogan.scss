@@ -1,0 +1,19 @@
+.slogan {
+  .block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  hr {
+    width: 30px;
+    border: 1px solid #616161;
+  }
+  h1 {
+    letter-spacing: 12px;
+  }
+  p {
+    font-size: 20px;
+    letter-spacing: 5px;
+  }
+}

@@ -3,6 +3,7 @@ import { hot } from 'react-hot-loader/root';
 import Header from './Header';
 import Banner from './Banner';
 import Media from './Media';
+import Section from './Section/Section';
 
 const Main = () => {
   useEffect(() => {
@@ -13,6 +14,7 @@ const Main = () => {
       <Header />
       <Banner />
       <Media />
+      <Section />
     </div>
   );
 };
