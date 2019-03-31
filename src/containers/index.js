@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { hot } from 'react-hot-loader/root';
 import Header from './Header';
+import Banner from './Banner';
 
 const Main = () => {
   useEffect(() => {
@@ -9,6 +10,7 @@ const Main = () => {
   return (
     <div>
       <Header />
+      <Banner />
     </div>
   );
 };
