@@ -1,0 +1,36 @@
+.title {
+  text-align: center;
+  &_main {
+  font-family: PT serif;
+  padding: 65px 0px 20px 0px;
+  letter-spacing: 12px;
+  font-size: 35px;
+  }
+  &_line {
+    font-size: 25px;
+    color: #7F7F80;
+  }
+  &_sub{
+    font-weight: 100;
+    font-size: 20px;
+    letter-spacing: 4px;
+    padding-bottom: 70px;
+    padding-top:20px;
+  }
+}
+
+.products_group {
+  width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 100px;
+  display: flex;
+  width: 80%;
+  .product{
+    display: inline-block;
+    padding: 0px 5px;
+    img{
+      width:100%;
+    }
+  }
+}
