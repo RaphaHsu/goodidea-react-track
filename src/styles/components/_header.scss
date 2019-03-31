@@ -1,0 +1,37 @@
+.nav-bar {
+  padding: 45px 0;
+}
+
+.nav-bar .logo {
+  font-weight: bold;
+  font-size: 24px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.nav-bar li {
+  float: left;
+  margin-right: 85px;
+}
+
+.nav-bar li:last-child {
+  margin-right: 0;
+}
+
+.header a {
+  color: #d3d3d3;
+}
+
+.header a:hover {
+  color: white;
+}
+
+.shopping-bag i {
+  color: #6ca1ad;
+  font-size: 28px;
+}
+
+.shopping-bag i:hover {
+  color: white;
+  font-size: 28px;
+}

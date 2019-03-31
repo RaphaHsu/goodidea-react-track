@@ -1,0 +1,115 @@
+.footer {
+  font-size: 0.9rem;
+  padding: 80px 0;
+}
+
+.footer .wrap {
+  margin-bottom: 70px;
+  padding: 0 45px;
+}
+
+.footer div {
+  letter-spacing: 2px;
+}
+
+.footer a {
+  color: white;
+}
+
+.footer div {
+  margin-bottom: 10px;
+}
+
+.social li {
+  float: left;
+  margin-left: 7%;
+}
+
+.social li:first-child {
+  margin-left: 0;
+}
+
+.social i {
+  font-size: 1.2em;
+}
+
+.social i:hover {
+  color: #6ca1ad;
+}
+
+.footer_middle form {
+  letter-spacing: 0;
+}
+
+.footer_middle input[type='email'] {
+  background-color: #525050;
+  color: white;
+  border: 1px solid white;
+  padding: 5px;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.footer_middle button {
+  background-color: #d3d3d3;
+  border: none;
+  color: black;
+  float: right;
+  padding: 7px;
+}
+
+.footer_middle button:hover {
+  background-color: #6ca1ad;
+  cursor: pointer;
+  color: white;
+  transition: all 0.3s;
+}
+
+.footer_right {
+  text-align: right;
+}
+
+.footer_right div {
+  display: inline-block;
+}
+
+.info {
+  text-align: center;
+}
+
+/* .footer_right {
+    text-align: right;
+}
+
+.footer_right div {
+    display: inline-block;
+    text-align: center;
+    width: 164px;
+} */
+
+.footer_right a {
+  letter-spacing: normal;
+  font-weight: 700;
+}
+
+.footer_right a:hover {
+  color: #6ca1ad;
+}
+
+.copyright {
+  color: #d3d3d3;
+  text-align: center;
+}
+
+.copyright span {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.copyright i {
+  color: red;
+}
+
+.copyright a {
+  border-bottom: 1px solid #000;
+}

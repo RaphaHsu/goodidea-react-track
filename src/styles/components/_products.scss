@@ -1,0 +1,56 @@
+.products {
+  margin-bottom: 90px;
+}
+
+.products .span-4-of-12 {
+  height: 455px;
+}
+
+.products img {
+  display: block;
+  margin: 0 auto;
+}
+
+.product_left,
+.product_right {
+  position: relative;
+}
+
+.products a {
+  display: block;
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.products a:hover {
+  background-color: #303132;
+  color: white;
+}
+
+.product_middle div {
+  color: #303132;
+  font-family: 'Times New Roman';
+  font-size: 3.5rem;
+  letter-spacing: 10px;
+  padding-top: 75px;
+  padding-bottom: 45px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.product_right {
+  position: relative;
+}
+
+.product_right img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto auto;
+}

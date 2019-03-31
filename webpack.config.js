@@ -28,6 +28,15 @@ module.exports = {
           'css-loader', // translates CSS into CommonJS
           'sass-loader' // compiles Sass to CSS, using Node Sass by default
         ]
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {}
+          }
+        ]
       }
     ]
   },
@@ -39,5 +48,6 @@ module.exports = {
     compress: true,
     port: 3000
   },
+  devtool: 'cheap-module-eval-source-map',
   plugins: [htmlPlugin]
 };
