@@ -1,0 +1,23 @@
+.content{
+  padding-top: 40px;
+  .contentContent{
+    @include layout;
+    text-align: center;
+    font-family: sans-serif;
+    .separationLine{
+      display: inline-block;
+      width: 50px;
+      border-top: 3px solid #000;
+      margin-bottom: 30px;
+    }
+    p{
+      margin-bottom: 30px;
+    }
+    .contentTitle{
+      font-size: 36px;
+    }
+    .contentSubTitle{
+      font-size: 18px;
+    }
+  }
+}
