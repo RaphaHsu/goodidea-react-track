@@ -5,9 +5,13 @@ header {
   justify-content: center;
   background-color: #525050;
   align-items: center;
+  .container{
+    align-items: center;
+    justify-content: space-around;
+  }
   .logo {
     color: #D2D2D2;
-    font-size: 20px;
+    font-size: 15px;
     line-height: 80px;
     letter-spacing: 8px;
     font-weight: 800;
@@ -33,7 +37,7 @@ header {
     display: inline-block;
     color: #bdbcbc;
     font-size: 13px;
-    margin: 0 30px;
+    padding: 0px 20px;
   }
   li:hover{
     cursor: pointer;

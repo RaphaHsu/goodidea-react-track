@@ -14,7 +14,7 @@ class Main extends React.Component {
           <h3 className="title_sub">Must Have Items</h3>
         </div>
 
-        <div className="products_group">
+        <div className="products_group container">
           <div className="product">
             <img src={product1} />
           </div>
