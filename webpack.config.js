@@ -15,7 +15,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader'
@@ -31,8 +31,11 @@ module.exports = {
       }
     ]
   },
+  resolve: {
+    extensions: ['.jsx', '.json', '.js']
+  },
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
+    contentBase: path.resolve(__dirname, 'dist'),
     compress: true,
     port: 3000
   },
