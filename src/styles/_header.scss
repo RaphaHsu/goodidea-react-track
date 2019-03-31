@@ -1,0 +1,30 @@
+.header {
+  background-color: #535151;
+  height: 70px;
+  color: #FFFFFF;
+  .block {
+    padding: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .icon {
+    font-size: 20px;
+    color:rgb(237, 237, 237);
+  }
+  .button {
+    background-color:#535151;
+    border: 0;
+    font-size: 14px;
+    color:#C2C2C2;
+  }
+  .button:hover {
+    color: #FFFFFF;
+  }
+  .image-bag {
+    height: 35px;
+  }
+}
