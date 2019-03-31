@@ -1,0 +1,69 @@
+.footer {
+  background-color: #535151;
+  color: #ffffff;
+  font-family: sans-serif;
+  padding: 60px 0;
+  text-align: center;
+
+  .footerContent {
+    @include layout;
+
+    .footerLayout {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 40px;
+
+      p {
+        margin-bottom: 10px;
+        font-size: 12px;
+      }
+
+      .title {
+        font-size: 14px;
+        color: #9E9E9E;
+      }
+    }
+
+    .footerConnected {
+      text-align: center;
+      width: 33%;
+      img{
+        margin-right: 5px;
+        cursor: pointer;
+      }
+    }
+
+    .footerEmail {
+      text-align: left;
+      width: 33%;
+
+      .email {
+        border: 2px solid #ffffff;
+        padding: 5px 10px;
+        margin-bottom: 10px;
+        font-size: 12px;
+      }
+
+      button {
+        border: none;
+        padding: 5px 10px;
+        text-align: right;
+        float: right;
+      }
+      .clearFix{
+        clear: both;
+      }
+    }
+
+    .footerContactUs {
+      width: 33%;
+      text-align: center;
+    }
+
+    .noticeText {
+      span {
+        border-bottom: 1px solid #000;
+      }
+    }
+  }
+}
