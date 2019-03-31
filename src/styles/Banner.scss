@@ -1,0 +1,49 @@
+.banner {
+  background-image: url("../images/cover.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 630px;
+  position: relative;
+  background-position: center;
+  &_intro {
+    height: 200px;
+    width: 600px;
+    background-color:rgba(255,255,255,0.3);
+    position: absolute;
+    top: calc(50% - 100px);
+    text-align: center;
+    left: calc(50% - 300px);
+    &_title {
+      font-size: 50px;
+      color: #313233;
+      font-weight: bold;
+      letter-spacing: 7px;
+      padding: 20px 0px;
+    }
+  }
+  &_bottom {
+    background-color: #e4e4e4;
+    text-align: center;
+    color: black;
+    padding: 15px 0px;
+    font-size: 15px;
+    letter-spacing: 2px;
+  }
+  button {
+  color: white;
+  font-size: 23px;
+  line-height: 50px;
+  font-family: sans-serif;
+  background-color: #303132;
+  padding: 0 60px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  &:hover{
+    background-color: #606265;
+  }
+}
+}
+
+
+
