@@ -4,6 +4,7 @@ import Header from './Header';
 import Banner from './Banner';
 import Media from './Media';
 import Section from './Section/Section';
+import Footer from './Footer';
 
 const Main = () => {
   useEffect(() => {
@@ -15,6 +16,7 @@ const Main = () => {
       <Banner />
       <Media />
       <Section />
+      <Footer />
     </div>
   );
 };
