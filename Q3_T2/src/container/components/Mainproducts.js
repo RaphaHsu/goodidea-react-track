@@ -7,23 +7,23 @@ import product3 from "../../static/images/pic_03.png"
 
 class Mainproducts extends Component {
   render() {
-    return (<section class="container mainproducts">
-      <div class="title">
-        <div class="title_main">YEAR ROUND</div>
-        <div class="title_line">—</div>
-        <div class="title_sub">Must Have Items </div>
+    return (<section className="container mainproducts">
+      <div className="title">
+        <div className="title_main">YEAR ROUND</div>
+        <div className="title_line">—</div>
+        <div className="title_sub">Must Have Items </div>
       </div>
-      <div class="products">
-        <div class="products_single">
+      <div className="products">
+        <div className="products_single">
           <img src={product1}/>
-          <div class="imgIntro">EDITOR'S PICKS</div>
+          <div className="imgIntro">EDITOR'S PICKS</div>
         </div>
-        <div class="products_single">
+        <div className="products_single">
           <img src={product2}/>
         </div>
-        <div class="products_single">
+        <div className="products_single">
           <img src={product3}/>
-          <div class="imgIntro">GET IN FOCUS</div>
+          <div className="imgIntro">GET IN FOCUS</div>
         </div>
       </div>
     </section>);

@@ -4,8 +4,8 @@ import "../../styles/header.scss"
 class Header extends Component {
   render() {
     return (<header>
-      <div class="container header_container">
-        <div class="logo">PRETTY GAL</div>
+      <div className="container header_container">
+        <div className="logo">PRETTY GAL</div>
         <nav>
           <li>
             <a href="">Home</a>
@@ -23,7 +23,7 @@ class Header extends Component {
             <a href="">Stockists</a>
           </li>
           <li>
-            <div class="shoppingCart"></div>
+            <div className="shoppingCart"></div>
           </li>
         </nav>
       </div>
