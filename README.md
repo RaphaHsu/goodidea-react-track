@@ -1,148 +1,70 @@
-- 在專案資料夾下Terminal輸入`npm init`
+[![Build Status](https://travis-ci.org/ReactMaker/simple_react_startkit.svg?branch=master)](https://travis-ci.org/ReactMaker/simple_react_startkit)
+[![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/)
+[![david-dm](https://david-dm.org/reactmaker/simple_react_startkit.svg)](https://david-dm.org/)
+[![Known Vulnerabilities](https://snyk.io/test/github/ReactMaker/simple_react_startkit/badge.svg?targetFile=package.json)](https://snyk.io/test/github/ReactMaker/simple_react_startkit?targetFile=package.json)
 
-- 創立一個 `.gitignore`來避免不需要的檔案被加入 remote repo
-  我們將 `/node_modules` 和 `/dist` 給 忽略掉
+# Simple React Startkit
 
-- `npm install`
+This is a simple react boilerplate, without complex dependencies(eg. redux or router), this project can help you start the react project in seconds.
 
-  ### babel
+這個環境包可以讓你快速體驗 ReactJS 開發環境的便利，我們並沒有在裏面放入額外的套件(例如 redux, router)，希望可以讓你用最簡單的環境開始學習 React
 
-- `npm install --save-dev @babel/core@7.1.0 @babel/cli@7.1.0 @babel/preset-env@7.1.0 @babel/preset-react@7.0.0`
+## 特色 feature
 
-  `babel-core` 是主要 babel package：我們要依靠這個，babel才能轉換我們的程式碼
-  `babel-cli` 允許我們用 command line 來編譯我們的檔案
-  `preset-env` ES6 轉 ES5
-  `preset-react`JSX 轉 ES5
+* [react 16.8](https://github.com/facebook/react)
+* [webpack 4](https://github.com/webpack/webpack)
+* [babel 7](https://github.com/babel/babel)
+* [eslint](http://eslint.org)
 
-- 根目錄創一個 `.babelrc` 告訴babel我們要使用 env 和 react 兩個 presets
+## 需求配置 requirement
+* node `^6.11.5`
+* npm `^3.10.10`
 
-  ```
-  {
-    "presets": ["@babel/env", "@babel/preset-react"]
-  }
-  ```
+## 開始 getting start
 
-  ### webpack
+先確定好安裝了 node 6.11.5 以上的版本，接著就可以輸入以下指令
 
-- `$ npm install --save-dev webpack@4.19.1 webpack-cli@3.1.1 webpack-dev-server@3.1.8 style-loader@0.23.0 css-loader@1.0.0`
+```bash
+$ git clone https://github.com/ReactMaker/simple_react_start_kit_2017
+$ cd simple_react_start_kit_2017
+$ npm install                   # Install project dependencies
+$ npm start                     # Compile and launch
+```
 
-  > 雖然教學是這樣教的，但是如果要印出Hello world而已
-  > style-loader 和 css-loader 是不需要的
+如果一切成功，就會看到以下畫面，並且瀏覽器會打開的範例頁面
 
-- 根目錄創立一個webpack.config.js
+![Imgur](https://i.imgur.com/MLcE6SO.png)
 
-- ```javascript
-  const path = require("path");
-  const webpack = require("webpack");
-  
-  module.exports = {
-    entry: "./src/index.js",
-    mode: "development",
-    module: {
-      rules: [
-        {
-          test: /\.(js|jsx)$/,
-          exclude: /(node_modules|bower_components)/,
-          loader: "babel-loader",
-          options: { presets: ["@babel/env"] }
-        },
-        {
-          test: /\.css$/,
-          use: ["style-loader", "css-loader"]
-        }
-      ]
-    },
-    resolve: { extensions: ["*", ".js", ".jsx"] },
-    output: {
-      path: path.resolve(__dirname, "dist/"),
-      publicPath: "/dist/",
-      filename: "bundle.js"
-    },
-    devServer: {
-      contentBase: path.join(__dirname, "public/"),
-      port: 3000,
-      publicPath: "http://localhost:3000/dist/",
-      hotOnly: true
-    },
-    plugins: [new webpack.HotModuleReplacementPlugin()]
-  };
-  ```
+開發當中最常用到的是 `npm start` 指令，我們還有一些其他的指令要介紹給你知道
 
-  `entry` 進入點：告訴webpack我們要從哪裡開始打包
-  `mode` 告訴webpack 是 develpoment，這樣在運行 dev-server 的時候就不用額外新增 mode flag
-  `module` 定義了如何轉出 javascript modules，並在 `rules`中定義他
-  舉例：當檔案是 `.js` `.jsx`時，我們就使用 babel-loader 去編譯他，並指定要用 `env` preset
-  `resolve` 指定了 webpack 要解析那些 extensions
-  `output` 告訴 webpack 打包好的程式碼要輸出在哪
-  `publicPath` 指定路徑，也告訴 webpack-dev-server 要去哪裡找檔案
+| `npm run <script>` | 說明                                                                         |
+|--------------------|------------------------------------------------------------------------------|
+| `start`            | 啟動網站在 8000 port                                                         |
+| `dist`             | 編譯整個網站成品到 dist 資料夾下                                             |
+| `lint`             | 檢查所有的 js 檔案有沒有符合 coding style                                    |
+| `lint:fix`         | 檢查所有的 js 檔案有沒有符合 coding style ，如果是一些簡單的錯誤就會嘗試修復 |
+| `deploy`           | 編譯整個網站成品後，上傳至Github靜態頁面，https://[Github 帳號].github.io/[Repositories Name]/#/ |
 
-  > 設定錯了，會得到404
 
-  `devServer` 則是設定 `webpack-dev-server` 用的， port 3000，`publicPath` 是拿來告訴 server ，我們的 bundle.js 在哪
-   [output.publicPath](https://webpack.js.org/configuration/output/#outputpublicpath) vs [devServer.publicPath](https://webpack.js.org/configuration/dev-server/#devserverpublicpath-)
+## Docker
 
-  ### React
 
-- `$npm install react react-dom react-scripts`
+如果想要把專案 build 到 docker 上面跑，請執行這條命令
+```
+npm run build:docker
+```
+輸入完命令之後會建立 docker image 名稱為 `reactdocker`
 
-- 接著我們創建一個 `public` 資料夾，創立一個 `index.html`
+![](https://i.imgur.com/LISz99c.png)
 
-  ```html
-  <!DOCTYPE html>
-  <html>
-  
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>React Starter</title>
-  </head>
-  
-  <body>
-    <div id="root"></div>
-    <noscript>
-      You need to enable JavaScript to run this app.
-    </noscript>
-    <script src="../dist/bundle.js"></script>
-  </body>
-  ```
+我們可以透過以下指令把映像檔跑起來
 
-- 接著我們創立 `src` 資料夾，在其內加入 `App.css`、`App.js`、`index.js`
+```
+docker run --name reactmaker -d -P reactdocker
+```
 
-  #### index.js
+因為我是用`-P`參數自動分配port，所以跑起來之後輸入 `docker ps` 察看系統給我哪個 port
 
-  ```javascript
-  import React from "react";
-  import ReactDOM from "react-dom";
-  import App from "./App.js";
-  ReactDOM.render(<App />, document.getElementById("root"));
-  ```
+![](https://i.imgur.com/Fww1ncw.png)
 
-  `#root`就是我們react要 `render` 的地方
-
-  #### App.js
-
-  ```javascript
-  import React, { Component} from "react";
-  import "./App.css";
-  
-  class App extends Component{
-    render(){
-      return(
-        <div className="App">
-          <h1> Hello, World! </h1>
-        </div>
-      );
-    }
-  }
-  
-  export default App;
-  ```
-
-  #### App.css
-
-  ```css
-  .App {
-    margin: 1rem;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  ```
+接著就可以在瀏覽器輸入localhost:32768看到我們包好的網頁了
