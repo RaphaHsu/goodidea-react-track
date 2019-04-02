@@ -34,3 +34,7 @@ dist/
 
 # IDE/Editor data
 .idea/
+
+#T2 folder
+t2/
+
