@@ -1,11 +1,9 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root';
+import Header from './header';
 
 const App = () => (
-  <div>
-    <h2>Hello, I`m ReactMaker.</h2>
-    <p>To get started, edit containers/index.js</p>
-  </div>
+  <Header />
   );
 
 export default hot(App);
