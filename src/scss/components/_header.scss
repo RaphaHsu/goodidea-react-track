@@ -1,0 +1,22 @@
+header {
+  background: #525252;
+  height: 80px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+
+  a {
+    color: #bebebe;
+  }
+
+  a:hover {
+    color: #fff;
+  }
+
+  .brandName {
+    font-size: 1.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+}
