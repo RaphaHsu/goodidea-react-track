@@ -6,9 +6,9 @@
   "author": "Ivan Tsai <oscar60310@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "./node_modules/.bin/webpack-dev-server --hot",
-    "build": "./node_modules/.bin/cross-env NODE_ENV=production ./node_modules/.bin/webpack --mode=production",
-    "lint": "./node_modules/.bin/eslint src --ext jsx --ext js"
+    "start": "webpack-dev-server",
+    "build": "cross-env NODE_ENV=production webpack --mode=production",
+    "lint": "eslint src --ext jsx --ext js"
   },
   "devDependencies": {
     "@babel/core": "^7.4.0",
