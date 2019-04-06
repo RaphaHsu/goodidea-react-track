@@ -1,6 +1,6 @@
-.navBar{
+nav{
   background-color: #535151;
-  .navBarContent{
+  .navBarContainer{
     @include layout;
     line-height:80px;
     ul{

@@ -7,8 +7,8 @@ let navListRender = navList.map(item=> <li key={item}>{item}</li>)
 
 export default function(){
   return (
-    <div className='navBar'>
-      <div className='navBarContent'>
+    <nav>
+      <div className='navBarContainer'>
         <ul>
           <li className='logo'>
             PRETTY GAL
@@ -19,6 +19,6 @@ export default function(){
           </li>
         </ul>
       </div>
-    </div>
+    </nav>
   )
 }
