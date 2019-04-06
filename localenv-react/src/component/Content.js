@@ -6,22 +6,18 @@ import right from '../image/right.png';
 
 export default function(){
   return (
-    <div className="content">
-      <div className="contentContent">
-        <p className="contentTitle">
+    <div className="product">
+        <h1>
           YEAR ROUND
-        </p>
-        <div className="separationLine">
-        </div>
-        <p className="contentSubTitle">
+        </h1>
+        <h2>
           Must Have Items
-        </p>
-        <div className="contentImage">
+        </h2>
+        <div className="productShowcase">
           <img src={left}/>
           <img src={middle}/>
           <img src={right}/>
         </div>
-      </div>
     </div>
   )
 }

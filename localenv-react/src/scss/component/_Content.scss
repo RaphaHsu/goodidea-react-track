@@ -1,23 +1,27 @@
-.content{
+.product {
   padding: 60px 0;
-  .contentContent{
-    @include layout;
-    text-align: center;
-    font-family: sans-serif;
-    .separationLine{
-      display: inline-block;
+  @include layout;
+  text-align: center;
+  font-family: sans-serif;
+
+  h1 {
+    font-size: 36px;
+    margin-bottom: 60px;
+    position: relative;
+    &:after{
+      background: #000000;
+      content: "";
+      height: 3px;
+      position: absolute;
+      bottom: -30px;
+      left:calc(50% - 25px);
       width: 50px;
-      border-top: 3px solid #000;
-      margin-bottom: 30px;
     }
-    p{
-      margin-bottom: 30px;
-    }
-    .contentTitle{
-      font-size: 36px;
-    }
-    .contentSubTitle{
-      font-size: 18px;
-    }
+  }
+
+  h2 {
+    font-size: 18px;
+    margin-bottom: 30px;
+
   }
 }
