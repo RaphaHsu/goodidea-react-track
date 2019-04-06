@@ -3,7 +3,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import "../../styles/search.scss";
 
 const Search = (Props) => {
-  return (<section className="search">
+  return (<section className="search container">
     <form className="search-form">
       <label>Book search</label>
       <input></input>

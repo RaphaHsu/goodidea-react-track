@@ -8,28 +8,25 @@ class Homepage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      bookData: "",
-      displayBookData:""
+      bookData: [],
+      displayBookData: []
     };
   }
   getBookData() {
     axios.get('https://bookshelf.goodideas-studio.com/api').then(response => {
-      this.setState({
-        bookData:response.data.list,
-        displayData:response.data.list
-      });
+      this.setState({bookData: response.data.list, displayBookData: response.data.list});
     })
   }
   componentDidMount() {
     this.getBookData();
   }
   render() {
-    return (<div className="homepage container">
+    return (<div className="homepage">
       <div className="banner">
         <h1>好想工作室 X 天瓏書局</h1>
       </div>
       <Search></Search>
-      <MainBooks bookData="this.state.displayData"></MainBooks>
+      <MainBooks bookData={this.state.displayBookData}></MainBooks>
     </div>);
   }
 }
