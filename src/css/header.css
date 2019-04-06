@@ -1,0 +1,206 @@
+/* body, html {
+  background: url(../img/Template_2.png) top center no-repeat;
+  background-size: 100%;
+  margin: 0 auto;
+  outline: 3px solid red;
+} */
+
+/* =========== Navibar ============ */
+#header {
+  width: 100%;
+  background-color: #535151;
+  /* outline: 1px solid red; */
+}
+
+#header ul {
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  /* outline: 2px dashed green; */
+}
+
+#header li {
+  display: inline-block;
+  padding: 0 30px;
+
+  line-height: 100px;
+  text-transform: capitalize;
+  color: #c9c9c9;
+  /* outline: 1px dotted blue; */
+}
+
+#header li:first-child {
+  padding-left: 0;
+
+  text-transform: uppercase;
+  letter-spacing: 8px;
+}
+
+li a {
+  display: inline-block;
+  color: #c9c9c9;
+  text-decoration: none;
+}
+
+li img {
+  vertical-align: middle;
+  /* 垂直置中 */
+  width: 40px;
+  height: auto;
+  margin: 0 auto;
+  /* 水平置中 */
+}
+
+/* ========== cover ========== */
+#cover {
+  position: relative;
+  width: 100%;
+  height: 470px;
+  /* background: url(../img/cover.jpg); */
+  background-size: cover;
+  background-position: center;
+}
+
+.shop {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-30%);
+  padding: 10px 20px;
+  background-color: rgba(255,255,255,0.3);
+  text-align: center;
+}
+
+h1  {
+  margin: 12px 0;
+
+  font-size: 55px;
+  font-family: 'Times New Roman', Times, serif;
+  text-transform: uppercase;
+  color: #303132;
+}
+
+.shop button {
+  padding: 10px 60px;
+  background: #303132;
+  border:none;
+
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.waistband {
+  display: block;
+  margin: 0;
+  text-align: center;
+  background-color: #c9c9c9;
+
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-weight: 100;
+  color: #303132;
+  line-height:36px;
+}
+
+/* ========== Buy ========== */
+
+#buy {
+  padding: 13px 0px;
+  text-align: center;
+}
+
+#buy h2 {
+
+  font-family: 'Times New Roman', Times, serif;
+  text-transform: uppercase;
+  color: #303132;
+  line-height:36px;
+  letter-spacing: 10px;
+}
+
+#buy h3 {
+
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+  font-weight: 100;
+  color: #303132;
+  letter-spacing: 3px;
+}
+
+#buy img {
+  margin-top: 34px;
+  height: 326px;
+}
+
+/* ========== footer ========== */
+footer {
+  margin-top: 40px;
+  background-color: #535151;
+}
+
+.info {
+  padding-top:50px;
+  text-align: center;
+}
+
+.col{
+  vertical-align: top;
+  display: inline-block;
+  width: 30%;
+  /* outline: 1px solid blue; */
+}
+
+.col.clearfix{
+  text-align: left;
+  width: 24%;
+}
+
+.col h6{
+  margin: 6px 0;
+  font-weight: 100;
+}
+
+.col i {
+  padding: 0 6px;
+  color: white;
+}
+
+.col h6 {
+  text-transform: uppercase;
+}
+
+.col.clearfix h6 {
+  text-transform: capitalize;
+}
+
+input {
+  background-color: #535151;
+  border: 1px solid white;
+  padding: 5px;
+  width:100%;
+}
+
+.clearfix button {
+  float: right;
+  text-transform: capitalize;
+  background-color: #fff;
+  color: #535151;
+  border: none;
+  margin-top: 4px;
+}
+
+.col h6:nth-child(n+2) {
+  text-transform: lowercase;
+  color:white;
+}
+
+::placeholder {
+  color: #fff;
+
+}
+
+footer>h6 {
+  margin: 0;
+  text-align: center;
+  line-height: 50px;
+}
