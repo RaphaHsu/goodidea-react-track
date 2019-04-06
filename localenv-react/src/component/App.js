@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import NavBar from "./NavBar.js"
 import Banner from './Banner.js'
-import Content from './Content.js'
+import Product from './Product.js'
 import Footer from './Footer.js'
 
 export default function() {
@@ -10,7 +10,7 @@ export default function() {
     <div>
       <NavBar/>
       <Banner/>
-      <Content/>
+      <Product/>
       <Footer/>
     </div>
   )
