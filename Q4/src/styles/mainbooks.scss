@@ -13,11 +13,12 @@
       border-radius: 2%;
       padding: 15px 5px;
       transition: background-color 300ms linear;
+      background-color: rgba(164, 164, 161, 0.49);
       color: black;
       &:hover{
         right:3px;
         bottom:3px;
-        background-color: rgba(164, 164, 161, 0.49);
+        background-color: white;
       }
       &-img {
          text-align: center;
