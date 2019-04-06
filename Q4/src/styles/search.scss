@@ -11,7 +11,6 @@
     }
     input{
       font-size: 16px;
-      margin-right: 10px;
       width: 30%;
       border: 1px solid black;
       line-height: 1.5;
@@ -19,6 +18,7 @@
     }
     span{
       cursor: pointer;
+      margin-right: 10px;
     }
   }
 }
