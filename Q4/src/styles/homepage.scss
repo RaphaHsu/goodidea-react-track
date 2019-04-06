@@ -1,0 +1,13 @@
+.homepage{
+  .banner{
+    background-image: url("../static/images/banner.jpg");
+    height: 50vh;
+    background-size: cover;
+  }
+  h1{
+    position: relative;
+    top: 40vh;
+    text-align: center;
+    background: rgba(255,255,255,0.5);
+  }
+}
