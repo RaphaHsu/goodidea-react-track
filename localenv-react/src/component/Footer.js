@@ -8,34 +8,30 @@ import pinterestIcon from '../image/pinterest.png';
 
 export default function(){
   return (
-    <div className="footer">
-      <div className="footerContent">
-        <div className="footerLayout">
-          <div className="footerConnected">
-            <p className="title">
+    <footer>
+        <div className="footerContainer">
+          <div className="connected">
+            <p className="subTitle">
               STAY CONNECTED
             </p>
             <img src={igIcon}/>
             <img src={fbIcon}/>
             <img src={twitterIcon}/>
             <img src={pinterestIcon}/>
-
           </div>
-          <div className="footerEmail">
-            <p className="title">
+          <div className="email">
+            <p className="subTitle">
               BE OUR FRIEND
             </p>
-            <div className="email">
-              Email
-            </div>
+            <input type="text" placeholder="Email" />
             <button>
               Update Me
             </button>
             <div className="clearFix">
             </div>
           </div>
-          <div className="footerContactUs">
-            <p className="title">
+          <div className="contactUs">
+            <p className="subTitle">
               NEED ASSISTANCE?
             </p>
             <p>
@@ -44,12 +40,11 @@ export default function(){
             <p>
               info@mysite.com
             </p>
-          </div>
-        </div>
-        <div className="noticeText">
-          © 2023 by PRETTY GAL. Proludly created with <span>Wix.com</span>
         </div>
       </div>
-    </div>
+      <div className="copyright">
+        © 2023 by PRETTY GAL. Proludly created with <span>Wix.com</span>
+      </div>
+    </footer>
   )
 }

@@ -1,69 +1,77 @@
-.footer {
+footer {
   background-color: #535151;
   color: #ffffff;
   font-family: sans-serif;
   padding: 60px 0;
   text-align: center;
 
-  .footerContent {
+  .footerContainer {
     @include layout;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
 
-    .footerLayout {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 40px;
+    p {
+      margin-bottom: 10px;
+      font-size: 12px;
+    }
 
-      p {
-        margin-bottom: 10px;
-        font-size: 12px;
-      }
+    .subTitle {
+      font-size: 14px;
+      color: #9E9E9E;
+    }
+  }
 
-      .title {
-        font-size: 14px;
-        color: #9E9E9E;
+  .connected {
+    text-align: center;
+    width: 33%;
+
+    img {
+      margin-right: 5px;
+      cursor: pointer;
+    }
+  }
+
+  .email {
+    text-align: left;
+    width: 33%;
+
+    input {
+      background-color: #535151;
+      color: #fff;
+      width: 93%;
+      border: 2px solid #ffffff;
+      padding: 5px 10px;
+      margin-bottom: 10px;
+      font-size: 12px;
+      &::placeholder{
+        color: #fff;
+
       }
     }
 
-    .footerConnected {
-      text-align: center;
-      width: 33%;
-      img{
-        margin-right: 5px;
-        cursor: pointer;
-      }
+    button {
+      border: none;
+      padding: 5px 10px;
+      text-align: right;
+      float: right;
     }
 
-    .footerEmail {
-      text-align: left;
-      width: 33%;
-
-      .email {
-        border: 2px solid #ffffff;
-        padding: 5px 10px;
-        margin-bottom: 10px;
-        font-size: 12px;
-      }
-
-      button {
-        border: none;
-        padding: 5px 10px;
-        text-align: right;
-        float: right;
-      }
-      .clearFix{
-        clear: both;
-      }
+    .clearFix {
+      clear: both;
     }
+  }
 
-    .footerContactUs {
-      width: 33%;
-      text-align: center;
-    }
+  .contactUs {
+    width: 33%;
+    text-align: center;
+  }
+}
 
-    .noticeText {
-      span {
-        border-bottom: 1px solid #000;
-      }
-    }
+.copyright {
+  @include layout;
+
+  span {
+    border-bottom: 1px solid #000;
   }
 }
