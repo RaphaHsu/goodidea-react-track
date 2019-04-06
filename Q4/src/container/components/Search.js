@@ -6,7 +6,7 @@ const Search = (Props) => {
   return (<section className="search container">
     <form className="search-form">
       <label>Book search</label>
-      <input></input>
+      <input placeholder="請輸入書名" onChange={(e)=>{Props.searchBook(e)}}></input>
       <span><FontAwesomeIcon icon={['fas', 'search']} size="2x"/></span>
     </form>
   </section>);

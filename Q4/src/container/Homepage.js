@@ -17,6 +17,14 @@ class Homepage extends Component {
       this.setState({bookData: response.data.list, displayBookData: response.data.list});
     })
   }
+
+  searchBook = (e) => {
+    let displayBookData = this.state.bookData.filter(book=>{
+      return book.name.match(e.target.value);
+    })
+    this.setState({
+      displayBookData: displayBookData});
+  }
   componentDidMount() {
     this.getBookData();
   }
@@ -25,7 +33,7 @@ class Homepage extends Component {
       <div className="banner">
         <h1>好想工作室 X 天瓏書局</h1>
       </div>
-      <Search></Search>
+      <Search searchBook={this.searchBook}></Search>
       <MainBooks bookData={this.state.displayBookData}></MainBooks>
     </div>);
   }
