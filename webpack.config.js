@@ -1,41 +1,79 @@
-const path = require("path");
-const webpack = require("webpack");
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
+const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: "./src/index.js",
-  mode: "development",
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
-        exclude: /(node_modules|bower_components)/,
-        loader: "babel-loader",
-        options: { presets: ["@babel/env"] }
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: ['babel-loader']
       },
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"]
-      }
+        use: [
+          'style-loader',
+          'css-loader',
+          'postcss-loader'
+        ]
+      },
+      {
+        test: /\.less$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'postcss-loader',
+          {
+            loader: "less-loader",
+            options: {
+                javascriptEnabled: true
+            }
+          }
+        ]
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'postcss-loader',
+          'sass-loader'
+        ]
+      },
+      {
+        test: /\.(png|jpg|gif|mp4|ogg|svg|woff|woff2|ttf|eot)$/,
+        loader: 'file-loader'
+      },
     ]
   },
-  resolve: { extensions: ["*", ".js", ".jsx"] },
-  output: {
-    path: path.resolve(__dirname, "dist/"),
-    publicPath: "/dist/",
-    filename: "bundle.js"
+  resolve: {
+    alias: {
+      components: path.resolve(__dirname, 'src/components/'),
+      containers: path.resolve(__dirname, 'src/containers/'),
+      static: path.resolve(__dirname, 'src/static/'),
+      theme: path.resolve(__dirname, 'src/theme/'),
+    },
+    extensions: [
+      '.js',
+      '.jsx'
+    ],
+    modules: [
+      path.resolve(__dirname, 'src/'),
+      path.resolve(__dirname, 'node_modules/'),
+    ]
   },
-  devServer: {
-    contentBase: path.join(__dirname, "src/"),
-    port: 3000,
-    publicPath: "http://localhost:3000/dist/",
-    hot: true
+  optimization: {
+    splitChunks: {
+      chunks: 'all'
+    }
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "src/index.html"),
+    new HtmlWebPackPlugin({
+      template: path.resolve(__dirname, 'src/index.html'),
       filename: "./index.html"
     })
-  ]
+  ],
+  devServer: {
+    compress: true,
+  },
 };
