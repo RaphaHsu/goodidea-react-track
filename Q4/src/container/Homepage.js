@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import "../styles/homepage.scss";
 import Search from "./components/Search.js";
-import Mainproducts from "./components/Mainproducts.js";
+import MainBooks from "./components/MainBooks.js";
 
 class Homepage extends Component {
   render() {
@@ -10,7 +10,7 @@ class Homepage extends Component {
         <h1>好想工作室 X 天瓏書局</h1>
       </div>
       <Search></Search>
-      <Mainproducts></Mainproducts>
+      <MainBooks></MainBooks>
     </div>);
   }
 }

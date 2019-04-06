@@ -1,0 +1,53 @@
+.mainbooks {
+   display: flex;
+   justify-content: flex-start;
+   align-items: stretch;
+   flex-wrap: wrap;
+   padding-top: 20px;
+   .book {
+      display: flex;
+      width: 30%;
+      margin: 10px 1%;
+      position: relative;
+      border: 2px solid green;
+      border-radius: 2%;
+      padding: 15px 5px;
+      &-img {
+         text-align: center;
+         img {
+            object-fit: contain;
+            width: 15vw;
+            height: 15vw;
+         }
+      }
+      &-info {
+         &-name {
+            font-size: 15px;
+            font-weight: bolder;
+            text-align: center;
+            margin-bottom: 10px;
+         }
+         &-isbn,
+         &-originprice,
+         &-sellprice {
+            font-size: 14px;
+         }
+         &-sellprice {
+           color:red;
+         }
+         &-more {
+            border: 1px green solid;
+            padding: 3px 5px;
+            border-radius: 5px;
+            color: black;
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            &:hover{
+              background-color: green;
+              color:white;
+            }
+         }
+      }
+   }
+}
