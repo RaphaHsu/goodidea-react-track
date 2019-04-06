@@ -9,7 +9,7 @@ export default function(){
         <h1>FALL & WINTER</h1>
         <button>Shop Now</button>
       </div>
-      <div className="bannerBottom">
+      <div className="shipping">
         FREE SHIPPING WORLWIDE
       </div>
     </div>

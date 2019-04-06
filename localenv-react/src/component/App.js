@@ -7,11 +7,11 @@ import Footer from './Footer.js'
 
 export default function() {
   return (
-    <div>
+    <React.Fragment>
       <NavBar/>
       <Banner/>
       <Product/>
       <Footer/>
-    </div>
+    </React.Fragment>
   )
 }
