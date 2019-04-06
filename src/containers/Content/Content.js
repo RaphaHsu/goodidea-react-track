@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-
-// https://bookshelf.goodideas-studio.com/api
+import Book from './Book';
 
 export default class Header extends Component {
   constructor(props) {
@@ -32,11 +31,17 @@ export default class Header extends Component {
     return (
       <React.Fragment>
         {tenlongBookDatas.map(element => (
-          <React.Fragment>
-            <img key={element.name} src={element.image} alt={element.name} />
-          </React.Fragment>
+          <Book
+            image={element.image}
+            name={element.name}
+            originPrice={element.originPrice}
+            sellPrice={element.sellPrice}
+            link={element.link}
+            ISBN={element.ISBN}
+            key={element.ISBN}
+          />
         ))}
       </React.Fragment>
     );
   }
-  }
+}
