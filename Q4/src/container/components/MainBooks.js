@@ -21,8 +21,8 @@ const MainBooks = ({bookData}) => {
         <div className="book-info">
           <div className="book-info-name">{book.name}</div>
           <div className="book-info-originprice">原價：NT {book.originPrice}</div>
-          <div className="book-info-sellprice">特價：NT {book.ISBN}</div>
-          <div className="book-info-isbn">ISBN：{book.sellPrice}</div>
+          <div className="book-info-sellprice">特價：NT{book.sellPrice}</div>
+          <div className="book-info-isbn">ISBN：{book.ISBN}</div>
           <a className="book-info-more" href={book.link}>Read more</a>
         </div>
       </a>)
