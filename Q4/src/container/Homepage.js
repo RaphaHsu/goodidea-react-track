@@ -19,8 +19,9 @@ class Homepage extends Component {
   }
 
   searchBook = (e) => {
+    const regex=new RegExp(e.target.value, "i");
     let displayBookData = this.state.bookData.filter(book=>{
-      return book.name.match(e.target.value);
+      return book.name.match(regex);
     })
     this.setState({
       displayBookData: displayBookData});
