@@ -22,17 +22,17 @@
       }
       &-img {
          text-align: center;
-         width: 55%;
+         width: 50%;
          img {
             object-fit: contain;
-            width: 15vw;
-            height: 15vw;
+            width: 10vw;
+            height: 13vw;
          }
       }
       &-info {
          width: 45%;
          &-name {
-            font-size: 15px;
+            font-size: 13px;
             font-weight: bolder;
             text-align: center;
             margin-bottom: 10px;
@@ -106,9 +106,6 @@
    .mainbooks .book {
       width: 45%;
    }
-   .mainbooks .book-info-name {
-      font-size: 13px;
-   }
    .mainbooks .book-img {
       width: 40%;
    }
@@ -126,6 +123,6 @@
    }
    .mainbooks .book-img img {
       height: 25vw;
-      width: 25vw;
+      width: 21vw;
    }
 }
