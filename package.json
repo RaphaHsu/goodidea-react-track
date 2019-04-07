@@ -20,6 +20,7 @@
     "@types/react-dom": "^16.8.3",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.5",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-polyfill": "^6.26.0",
     "cross-env": "^5.2.0",
     "css-loader": "^2.1.1",
