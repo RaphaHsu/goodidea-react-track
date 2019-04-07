@@ -4,11 +4,18 @@ import "../../styles/mainbooks.scss";
 const MainBooks = ({bookData}) => {
   let bookList = "";
   if (bookData.length == 0) {
-    bookList = <section className="mainbooks">
+    bookList = <section className="mainbooks container">
       <div className="loading">
       <div className="line"></div>
       <div className="line"></div>
       <div className="line"></div>
+    </div>
+    </section>
+    return bookList
+  }else if(bookData[0] == "查無任何書籍"){
+    bookList = <section className="mainbooks container">
+      <div className="nothig">
+        查無任何書籍，請替換其他關鍵字
     </div>
     </section>
     return bookList

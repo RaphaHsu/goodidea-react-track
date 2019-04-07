@@ -19,12 +19,14 @@ class Homepage extends Component {
   }
 
   searchBook = (e) => {
-    const regex=new RegExp(e.target.value, "i");
-    let displayBookData = this.state.bookData.filter(book=>{
+    const regex = new RegExp(e.target.value, "i");
+    let displayBookData = this.state.bookData.filter(book => {
       return book.name.match(regex);
     })
-    this.setState({
-      displayBookData: displayBookData});
+    if (displayBookData.length == 0) {
+      displayBookData = ["查無任何書籍"];
+    }
+    this.setState({displayBookData: displayBookData});
   }
   componentDidMount() {
     this.getBookData();
