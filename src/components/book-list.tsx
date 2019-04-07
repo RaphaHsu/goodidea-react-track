@@ -5,7 +5,7 @@ import { useObservable } from 'rxjs-hooks';
 const BookListComponent = ({}) => {
   const books = useObservable(() => books$);
   if (books == null) {
-    return <div>Not books found</div>;
+    return <div>No books found</div>;
   }
   return (
     <div>
