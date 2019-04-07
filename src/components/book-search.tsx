@@ -1,19 +1,43 @@
 import * as React from 'react';
 import { BooksApiResponse } from '../models/books-api';
 import BookList from './book-list';
-import { books$ } from '../services/books.service';
+import { books$, booksLoadCount$ } from '../services/books.service';
 
 export default class BookSearchComponent extends React.Component {
+  private bookListDom = React.createRef<HTMLDivElement>();
   public componentDidMount() {
+    if (this.bookListDom.current) {
+      this.bookListDom.current.onscroll = () => {
+        if (this.bookListDom.current) {
+          const dom = this.bookListDom.current;
+          const scroll = dom.scrollTop + dom.clientHeight;
+          if (scroll + 100 > dom.scrollHeight) {
+            this.loadMore();
+          }
+        }
+      };
+    }
     this.fetchData();
   }
 
   public render() {
     return (
-      <div style={{ background: '#eeeeee', padding: 10, fontSize: 20 }}>
+      <div
+        style={{
+          background: '#eeeeee',
+          padding: 10,
+          fontSize: 20,
+          height: 'calc(100% - 20px)',
+          display: 'flex',
+          flexDirection: 'column',
+        }}
+      >
         <div>好想天瓏書單</div>
-        <div>
-        <BookList />
+        <div
+          ref={this.bookListDom}
+          style={{ flex: '1 1 0', width: '100%', overflowY: 'scroll' }}
+        >
+          <BookList />
         </div>
       </div>
     );
@@ -25,6 +49,12 @@ export default class BookSearchComponent extends React.Component {
       books$.next(result.list);
     } catch (e) {
       console.error(e);
+    }
+  }
+  private loadMore() {
+    const current = booksLoadCount$.getValue();
+    if (current < books$.getValue().length) {
+      booksLoadCount$.next(current + 20);
     }
   }
 }
