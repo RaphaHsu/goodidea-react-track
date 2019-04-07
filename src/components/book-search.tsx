@@ -10,8 +10,11 @@ export default class BookSearchComponent extends React.Component {
 
   public render() {
     return (
-      <div>
+      <div style={{ background: '#eeeeee', padding: 10, fontSize: 20 }}>
+        <div>好想天瓏書單</div>
+        <div>
         <BookList />
+        </div>
       </div>
     );
   }
