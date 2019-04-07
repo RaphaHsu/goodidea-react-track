@@ -16,7 +16,7 @@ $cd Q3_T2
 $npm install
 $npm start
 ```
-[Q3說明檔](https://hackmd.io/c-SFhTqhTXS3eTEkubAMdg?edit)
+[Q3說明檔](https://hackmd.io/c-SFhTqhTXS3eTEkubAMdg?view)
 
 ## Week3
 Q4. [入門] 天瓏書籍搜尋器：
