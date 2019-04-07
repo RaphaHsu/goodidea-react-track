@@ -32,7 +32,7 @@ class Homepage extends Component {
   render() {
     return (<div className="homepage">
       <div className="banner">
-        <h1>好想工作室 X 天瓏書局</h1>
+        <h1>天瓏書局 X 好想工作室</h1>
       </div>
       <Search searchBook={this.searchBook}></Search>
       <MainBooks bookData={this.state.displayBookData}></MainBooks>

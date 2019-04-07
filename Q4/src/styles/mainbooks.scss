@@ -22,6 +22,7 @@
       }
       &-img {
          text-align: center;
+         width: 55%;
          img {
             object-fit: contain;
             width: 15vw;
@@ -29,6 +30,7 @@
          }
       }
       &-info {
+        width: 45%;
          &-name {
             font-size: 15px;
             font-weight: bolder;
@@ -44,16 +46,18 @@
             color: red;
          }
          &-more {
-            border: 1px green solid;
+            background-color: white;
+            border: 1px gray solid;
             padding: 3px 5px;
             border-radius: 5px;
             color: black;
             position: absolute;
-            bottom: 5px;
-            right: 5px;
+            bottom: 7px;
+            right: 7px;
             &:hover {
-               background-color: green;
-               color: white;
+              background-color: rgba(164, 164, 161, 0.49);
+               // background-color: rgb(59, 153, 207);
+               // color: white;
             }
          }
       }
@@ -71,13 +75,13 @@
       background-color: #4b9cdb;
       margin: 0 5px;
    }
-   .load-3 .line:nth-last-child(1) {
+   .loading .line:nth-last-child(1) {
       animation: loadingC 0.6s 0.1s linear infinite;
    }
-   .load-3 .line:nth-last-child(2) {
+   .loading .line:nth-last-child(2) {
       animation: loadingC 0.6s 0.2s linear infinite;
    }
-   .load-3 .line:nth-last-child(3) {
+   .loading .line:nth-last-child(3) {
       animation: loadingC 0.6s 0.3s linear infinite;
    }
    @keyframes loadingC {
@@ -93,20 +97,29 @@
    }
 }
 @media only screen and (max-width: 1170px) {
-  .mainbooks .book {
-    width:45%;
-  }
-  .mainbooks .book-info-name{
-    font-size: 13px;
-  }
+   .mainbooks .book {
+      width: 45%;
+   }
+   .mainbooks .book-info-name {
+      font-size: 13px;
+   }
+   .mainbooks .book-img{
+     width: 40%;
+   }
+   .mainbooks .book-info{
+     width: 60%;
+   }
 }
 @media only screen and (max-width: 750px) {
-  .mainbooks .book {
-    width:85%;
+  .mainbooks{
     justify-content: center;
   }
-  .mainbooks .book-img img{
-    height: 25vw;
-    width: 25vw;
-  }
+   .mainbooks .book {
+      width: 85%;
+      justify-content: center;
+   }
+   .mainbooks .book-img img {
+      height: 25vw;
+      width: 25vw;
+   }
 }
