@@ -1,0 +1,128 @@
+.mainbooks {
+   display: flex;
+   justify-content: flex-start;
+   align-items: stretch;
+   flex-wrap: wrap;
+   padding-top: 20px;
+   .book {
+      display: flex;
+      width: 30%;
+      margin: 10px 1%;
+      position: relative;
+      border: 2px solid gray;
+      border-radius: 2%;
+      padding: 30px 5px;
+      transition: background-color 300ms linear;
+      background-color: rgba(164, 164, 161, 0.49);
+      color: black;
+      &:hover {
+         right: 3px;
+         bottom: 3px;
+         background-color: white;
+      }
+      &-img {
+         text-align: center;
+         width: 50%;
+         img {
+            object-fit: contain;
+            width: 10vw;
+            height: 13vw;
+         }
+      }
+      &-info {
+         width: 45%;
+         &-name {
+            font-size: 13px;
+            font-weight: bolder;
+            text-align: center;
+            margin-bottom: 10px;
+         }
+         &-isbn,
+         &-originprice,
+         &-sellprice {
+            font-size: 13px;
+         }
+         &-sellprice {
+            color: red;
+         }
+         &-more {
+            background-color: white;
+            border: 1px gray solid;
+            padding: 3px 5px;
+            border-radius: 5px;
+            color: black;
+            position: absolute;
+            bottom: 7px;
+            right: 7px;
+            &:hover {
+               background-color: rgba(164, 164, 161, 0.49);
+               // background-color: rgb(59, 153, 207);
+               // color: white;
+            }
+         }
+      }
+   }
+   .nothig {
+      text-align: center;
+      width: 100%;
+      font-size: 20px;
+      color: darkred;
+   }
+   //loading
+   .loading {
+      height: 50px;
+      margin: 0 auto;
+   }
+   .line {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      border-radius: 15px;
+      background-color: #4b9cdb;
+      margin: 0 5px;
+   }
+   .loading .line:nth-last-child(1) {
+      animation: loadingC 0.6s 0.1s linear infinite;
+   }
+   .loading .line:nth-last-child(2) {
+      animation: loadingC 0.6s 0.2s linear infinite;
+   }
+   .loading .line:nth-last-child(3) {
+      animation: loadingC 0.6s 0.3s linear infinite;
+   }
+   @keyframes loadingC {
+      0 {
+         transform: translate(0,0);
+      }
+      50% {
+         transform: translate(0,15px);
+      }
+      100% {
+         transform: translate(0,0);
+      }
+   }
+}
+@media only screen and (max-width: 1170px) {
+   .mainbooks .book {
+      width: 45%;
+   }
+   .mainbooks .book-img {
+      width: 40%;
+   }
+   .mainbooks .book-info {
+      width: 60%;
+   }
+}
+@media only screen and (max-width: 750px) {
+   .mainbooks {
+      justify-content: center;
+   }
+   .mainbooks .book {
+      width: 85%;
+      justify-content: center;
+   }
+   .mainbooks .book-img img {
+      height: 25vw;
+      width: 21vw;
+   }
+}

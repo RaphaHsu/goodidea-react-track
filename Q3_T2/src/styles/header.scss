@@ -1,0 +1,44 @@
+header {
+   background-color: #535151;
+   display: flex;
+   justify-content: center;
+   .header_container {
+      padding: 35px 0;
+      justify-content: space-between;
+   }
+   .logo {
+      width: 25%;
+      color: #D2D2D2;
+      font-family: sans-serif;
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 8px;
+   }
+   nav {
+      display: flex;
+      width: 70%;
+      justify-content: space-between;
+      align-items: center;
+      li {
+         a {
+            color: #D3D3D3;
+            font-size: 20px;
+            font-family: sans-serif;
+            &:hover {
+               color: white;
+            }
+         }
+         .shoppingCart {
+            background-image: url("../static/images/shoppingbag.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: 40px;
+            width: 40px;
+            cursor: pointer;
+            &:hover{
+              opacity: 0.8;
+            }
+         }
+      }
+   }
+}
