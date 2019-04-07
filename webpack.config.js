@@ -5,7 +5,7 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 module.exports = {
   context: path.resolve("src/"),
   entry: {
-    client: "./index"
+    client: ["babel-polyfill", "./index"]
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx"]
