@@ -6,7 +6,7 @@ import '../styles/_book-list.scss';
 
 const BookListComponent = ({}) => {
   const books = useObservable(() => booksWithFilter$);
-  if (books == null) {
+  if (books == null || books.length === 0) {
     return <div>No books found</div>;
   }
   return (

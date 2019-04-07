@@ -1,10 +1,27 @@
 import * as React from 'react';
 import { BooksApiResponse } from '../models/books-api';
 import BookList from './book-list';
-import { books$, booksLoadCount$ } from '../services/books.service';
+import {
+  books$,
+  booksLoadCount$,
+  booksFilter$,
+} from '../services/books.service';
+import TextField from '@material-ui/core/TextField';
 
-export default class BookSearchComponent extends React.Component {
+interface BooksearchState {
+  filter: string;
+}
+export default class BookSearchComponent extends React.Component<
+  {},
+  BooksearchState
+> {
   private bookListDom = React.createRef<HTMLDivElement>();
+  constructor(props: BooksearchState) {
+    super(props);
+    this.state = {
+      filter: '',
+    };
+  }
   public componentDidMount() {
     if (this.bookListDom.current) {
       this.bookListDom.current.onscroll = () => {
@@ -33,6 +50,12 @@ export default class BookSearchComponent extends React.Component {
         }}
       >
         <div>好想天瓏書單</div>
+        <TextField
+          label="ISBN / Title"
+          value={this.state.filter}
+          onChange={this.handleChange}
+          margin="normal"
+        />
         <div
           ref={this.bookListDom}
           style={{ flex: '1 1 0', width: '100%', overflowY: 'scroll' }}
@@ -57,4 +80,8 @@ export default class BookSearchComponent extends React.Component {
       booksLoadCount$.next(current + 20);
     }
   }
+  private handleChange = (event: any) => {
+    this.setState({ filter: event.target.value });
+    booksFilter$.next(event.target.value);
+  };
 }
