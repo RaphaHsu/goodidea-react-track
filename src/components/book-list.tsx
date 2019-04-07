@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { books$ } from '../services/books.service';
+import { booksWithFilter$ } from '../services/books.service';
 import { useObservable } from 'rxjs-hooks';
 import BookInfo from './book-info';
 import '../styles/_book-list.scss';
 
 const BookListComponent = ({}) => {
-  const books = useObservable(() => books$);
+  const books = useObservable(() => booksWithFilter$);
   if (books == null) {
     return <div>No books found</div>;
   }
