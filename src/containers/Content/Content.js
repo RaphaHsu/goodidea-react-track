@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
 import Book from './Book';
+import Paging from './Paging';
 
 export default class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      tenlongBookDatas: []
+      tenlongBookDatas: [],
+      pageOfItems: []
     };
   }
 
@@ -22,15 +24,22 @@ export default class Header extends Component {
     })).catch(err => err);
   };
 
+  onChangePage = (pageOfItems) => {
+    this.setState({
+      pageOfItems
+    });
+  }
+
   componentDidMount() {
     this.getTenlongBookDatas();
   }
 
   render() {
-    const {tenlongBookDatas} = this.state;
+    const {tenlongBookDatas, pageOfItems} = this.state;
     return (
       <React.Fragment>
-        {tenlongBookDatas.map(element => (
+        <Paging books={tenlongBookDatas} onChangePage={this.onChangePage} />
+        {pageOfItems.map(element => (
           <Book
             image={element.image}
             name={element.name}
