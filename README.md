@@ -17,3 +17,12 @@ $npm install
 $npm start
 ```
 [Q3說明檔](https://hackmd.io/c-SFhTqhTXS3eTEkubAMdg?edit)
+
+## Week3
+Q4. [入門] 天瓏書籍搜尋器：
+```
+$cd Q4
+$npm install
+$npm start
+```
+[Q4說明檔](https://hackmd.io/SSYt_Fo-Seusr4VR3qwzOA?view)
