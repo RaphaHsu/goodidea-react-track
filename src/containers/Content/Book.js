@@ -5,11 +5,15 @@ const Book = ({
   image, name, originPrice, sellPrice, link, ISBN
 }) => (
   <React.Fragment>
-    <img src={image} alt={name} />
-    <a href={link}>{name}</a>
-    <p>原始價位：{originPrice}</p>
-    <p>打折價位：{sellPrice}</p>
-    <p>ISBN：{ISBN}</p>
+    <div className="book-block">
+      <a href={link}><img src={image} alt={name} /></a>
+      <div className="information-block">
+        <p className="name"><a href={link}>{name}</a></p>
+        <p className="sell-price">NT${sellPrice}</p>
+        <p className="origin-price">NT${originPrice}</p>
+        <p>ISBN：{ISBN}</p>
+      </div>
+    </div>
   </React.Fragment>
 );
 

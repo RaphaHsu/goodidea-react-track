@@ -1,0 +1,10 @@
+.paging {
+  display: flex;
+  justify-content: center;
+}
+.books {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}

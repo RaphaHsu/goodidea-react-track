@@ -1,0 +1,29 @@
+.book-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: space-around;
+  max-width: 200px;
+  img {
+    max-height: 266px;
+  }
+  .information-block {
+
+    .name {
+      // line-clamp: 2;
+      box-orient: vertical;
+      white-space: normal;
+    }
+    .origin-price {
+      font-size: 12px;
+      text-decoration:line-through;
+      display: inline;
+    }
+    .sell-price {
+      font-size: 20px;
+      color: green;
+      display: inline;
+    }
+  }
+}

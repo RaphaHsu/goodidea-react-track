@@ -38,18 +38,22 @@ export default class Header extends Component {
     const {tenlongBookDatas, pageOfItems} = this.state;
     return (
       <React.Fragment>
-        <Paging books={tenlongBookDatas} onChangePage={this.onChangePage} />
-        {pageOfItems.map(element => (
-          <Book
-            image={element.image}
-            name={element.name}
-            originPrice={element.originPrice}
-            sellPrice={element.sellPrice}
-            link={element.link}
-            ISBN={element.ISBN}
-            key={element.ISBN}
-          />
-        ))}
+        <div className="paging">
+          <Paging books={tenlongBookDatas} onChangePage={this.onChangePage} />
+        </div>
+        <div className="books">
+          {pageOfItems.map(element => (
+            <Book
+              image={element.image}
+              name={element.name}
+              originPrice={element.originPrice}
+              sellPrice={element.sellPrice}
+              link={element.link}
+              ISBN={element.ISBN}
+              key={element.ISBN}
+            />
+          ))}
+        </div>
       </React.Fragment>
     );
   }
