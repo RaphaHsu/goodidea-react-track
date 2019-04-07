@@ -1,0 +1,12 @@
+.book-list {
+  .book-card {
+    width: 300px;
+    margin: 10px;
+  }
+  @media screen and (max-width: 600px) {
+    .book-card {
+      width: 100%;
+      margin: 10px;
+    }
+  }
+}

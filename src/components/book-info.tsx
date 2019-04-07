@@ -12,9 +12,19 @@ const BookInfoComponent = (props: { data: BookInformation }) => {
         title={props.data.name}
       />
       <CardContent>
-        <div style={{ color: colors.grey[700] , fontSize: 14}}>{props.data.ISBN}</div>
-        <a style={{ fontSize: 16, color: colors.grey[900] }} href={props.data.link}>{props.data.name}</a>
-        <div style={{ color: colors.cyan[500] , fontSize: 20}}>${props.data.sellPrice}</div>
+        <div style={{ color: colors.grey[700], fontSize: 14 }}>
+          {props.data.ISBN}
+        </div>
+        <a
+          style={{ fontSize: 16, color: colors.grey[900] }}
+          href={props.data.link}
+          target="_blank"
+        >
+          {props.data.name}
+        </a>
+        <div style={{ color: colors.cyan[500], fontSize: 20 }}>
+          ${props.data.sellPrice}
+        </div>
       </CardContent>
     </Card>
   );

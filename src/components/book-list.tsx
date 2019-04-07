@@ -2,6 +2,7 @@ import * as React from 'react';
 import { books$ } from '../services/books.service';
 import { useObservable } from 'rxjs-hooks';
 import BookInfo from './book-info';
+import '../styles/_book-list.scss';
 
 const BookListComponent = ({}) => {
   const books = useObservable(() => books$);
@@ -10,19 +11,14 @@ const BookListComponent = ({}) => {
   }
   return (
     <div
+      className="book-list"
       style={{
         display: 'flex',
         flexWrap: 'wrap',
       }}
     >
       {books.map((b, i) => (
-        <div
-          key={i}
-          style={{
-            width: 300,
-            margin: 10,
-          }}
-        >
+        <div className="book-card" key={i}>
           <BookInfo data={b} />
         </div>
       ))}
