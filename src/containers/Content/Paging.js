@@ -104,7 +104,7 @@ export default class Paging extends Component {
               </button>
             </li>
             {pager.pages.map(page => (
-              <li key={page.ISBN} active={pager.currentPage === page ? "true" : null}>
+              <li key={page} active={pager.currentPage === page ? "true" : null}>
                 <button type="button" onClick={() => this.setPage(page)}>
                   {page}
                 </button>

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Book from './Book';
 import Paging from './Paging';
+import Search from './Search';
 
 export default class Header extends Component {
   constructor(props) {
@@ -24,7 +25,7 @@ export default class Header extends Component {
     })).catch(err => err);
   };
 
-  onChangePage = (pageOfItems) => {
+  onChangeData = (pageOfItems) => {
     this.setState({
       pageOfItems
     });
@@ -38,11 +39,14 @@ export default class Header extends Component {
     const {tenlongBookDatas, pageOfItems} = this.state;
     return (
       <React.Fragment>
+        <div className="search">
+          <Search books={tenlongBookDatas} onChangeSearch={this.onChangeData} />
+        </div>
         <div className="paging">
-          <Paging books={tenlongBookDatas} onChangePage={this.onChangePage} />
+          <Paging books={tenlongBookDatas} onChangePage={this.onChangeData} />
         </div>
         <div className="books">
-          {pageOfItems.map(element => (
+          { pageOfItems.length === 0 ? <p>Not Found!</p> : pageOfItems.map(element => (
             <Book
               image={element.image}
               name={element.name}
