@@ -8,24 +8,35 @@ export default class Header extends Component {
     super(props);
     this.state = {
       tenlongBookDatas: [],
-      pageOfItems: []
+      searchOfItems: [],
+      pageOfItems: [],
+      status: false
     };
   }
 
   getTenlongBookDatas = () => {
-     fetch('https://bookshelf.goodideas-studio.com/api', {
+    fetch('https://bookshelf.goodideas-studio.com/api', {
       cache: 'no-cache',
       method: 'GET',
       mode: 'cors'
     })
     .then(response => response.json().then((data) => {
+      const bookDatas = data.list;
       this.setState({
-        tenlongBookDatas: data.list
+        tenlongBookDatas: bookDatas,
+        searchOfItems: bookDatas,
+        status: true
       });
     })).catch(err => err);
   };
 
-  onChangeData = (pageOfItems) => {
+  onSearchData = (searchOfItems) => {
+    this.setState({
+      searchOfItems
+    });
+  }
+
+  onPagingData = (pageOfItems) => {
     this.setState({
       pageOfItems
     });
@@ -36,17 +47,19 @@ export default class Header extends Component {
   }
 
   render() {
-    const {tenlongBookDatas, pageOfItems} = this.state;
+    const {
+      tenlongBookDatas, searchOfItems, pageOfItems, status
+    } = this.state;
     return (
       <React.Fragment>
         <div className="search">
-          <Search books={tenlongBookDatas} onChangeSearch={this.onChangeData} />
+          <Search books={tenlongBookDatas} onChangeSearch={this.onSearchData} />
         </div>
         <div className="paging">
-          <Paging books={tenlongBookDatas} onChangePage={this.onChangeData} />
+          <Paging books={searchOfItems} onChangePage={this.onPagingData} />
         </div>
         <div className="books">
-          { pageOfItems.length === 0 ? <p>Not Found!</p> : pageOfItems.map(element => (
+          { (status === true && pageOfItems.length === 0) ? <p>Not Found!</p> : pageOfItems.map(element => (
             <Book
               image={element.image}
               name={element.name}

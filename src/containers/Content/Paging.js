@@ -13,23 +13,25 @@ export default class Paging extends Component {
   setPage = (page) => {
     const {books, onChangePage} = this.props;
     let {pager} = this.state;
-    if (page < 1 || page > pager.totalPages) {
-      return;
-    }
 
     pager = this.getPager(books.length, page);
-
-    const pageOfItems = books.slice(pager.startIndex, pager.endIndex + 1);
 
     this.setState({
       pager
     });
+
+    if (page < 1 || page > pager.totalPages) {
+      onChangePage([]);
+      return;
+    }
+
+    const pageOfItems = books.slice(pager.startIndex, pager.endIndex + 1);
     onChangePage(pageOfItems);
   }
 
   getPager = (totalItems, currentPage, pageSize) => {
     currentPage = currentPage || 1;
-    pageSize = pageSize || 6;
+    pageSize = pageSize || 10;
 
     const totalPages = Math.ceil(totalItems / pageSize);
 
@@ -68,13 +70,13 @@ export default class Paging extends Component {
     };
   }
 
-  componentWillMount() {
-    const {books} = this.props;
-    const {initialPage} = this.state;
-    if (books && books.length) {
-      this.setPage(initialPage);
-    }
-  }
+  // componentWillMount() {
+  //   const {books} = this.props;
+  //   const {initialPage} = this.state;
+  //   if (books && books.length) {
+  //     this.setPage(initialPage);
+  //   }
+  // }
 
   componentDidUpdate(prevProps) {
     const {books} = this.props;
@@ -86,7 +88,7 @@ export default class Paging extends Component {
 
   render() {
     const {pager} = this.state;
-    if (!pager.pages || pager.pages.length <= 1) {
+    if (!pager.pages || pager.pages.length === 0) {
       return null;
     }
     return (

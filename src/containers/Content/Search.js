@@ -9,11 +9,11 @@ export default class Search extends Component {
     };
   }
 
-  toSearch = (event) => {
+  toSearch = async (event) => {
     const {books, onChangeSearch} = this.props;
     let {search} = this.state;
     search = event.target.value;
-    const filterBooks = books.filter(book => book.name.indexOf(search) !== -1 || book.ISBN.indexOf(search) !== -1);
+    const filterBooks = books.filter(book => book.name.toLowerCase().indexOf(search.toLowerCase()) !== -1 || book.ISBN.indexOf(search) !== -1);
     onChangeSearch(filterBooks);
   }
 
