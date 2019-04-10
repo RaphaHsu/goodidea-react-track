@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import BooksDisplay from "./BooksDisplay"
-import '../styles/Homepage.scss'
-import "../styles/reset.scss";
+import '../styles/Homepage.scss';
+import '../styles/reset.scss';
 
 class Homepage extends Component {
   constructor(props) {
@@ -31,6 +31,9 @@ class Homepage extends Component {
     const { booksData, filterBooksData } = this.state;
     return (
       <div>
+        <div className="header">
+          <div className="header-text">天瓏書局 書籍查詢</div>
+        </div>
         <ul>
           {booksData.map((book, index) => (
             <li>{book.name}</li>
