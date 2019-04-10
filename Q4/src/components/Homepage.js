@@ -34,11 +34,7 @@ class Homepage extends Component {
         <div className="header">
           <div className="header-text">天瓏書局 書籍查詢</div>
         </div>
-        <ul>
-          {booksData.map((book, index) => (
-            <li>{book.name}</li>
-          ))}
-        </ul>
+        <BooksDisplay BooksData={this.state.filterBooksData} />
       </div>
     );
   }

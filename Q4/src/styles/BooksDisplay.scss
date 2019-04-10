@@ -1,0 +1,79 @@
+.data-result{
+  text-align: center;
+  padding-top: 20px;
+  color: #664d28;
+}
+
+.display-container{
+  display: flex;
+  flex-wrap: wrap;
+  padding-top:25px;
+  justify-content: space-around;
+  
+  .book{
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+    border:1px solid rgba(237, 244, 244, 0.7);
+    margin: 10px;
+    padding: 10px;
+    padding-bottom: 60px;
+    border-radius: 5px;
+    position: relative;
+    @media only screen and (max-width: 768px) {
+    width: 60%;
+    padding-bottom: 40px;
+    }
+    @media only screen and (max-width: 550px) {
+    width: 80%;
+    padding-bottom: 50px;
+    }
+    
+    &:hover{
+      background: rgba(237, 244, 244, 0.7);
+      transform: scale(1.05);
+      cursor:pointer;
+    }
+    &-image-container{
+      width: 45%;
+      text-align:center;
+      padding:0px 20px;
+      img{
+        width:100%; 
+      }
+    }
+    &-info{
+      width: 40%;    
+      &-bookname{
+      word-wrap:break-word;
+      font-weight: 800;
+      padding-top: 10px;
+      color: #664d28;
+      }
+      &-originprice{
+      text-decoration: line-through;
+      color: #505656;
+      }
+      &-sellprice{
+      color: red;
+      }
+      &-ISBN{
+        color: #505656;
+      }
+      &-more{
+        padding: 5px 10px;
+        color: #505656;
+        border-radius: 5px;
+        border: 1px solid #505656;
+        position: absolute; 
+        bottom: 10px;
+        right: 10px;
+        &:hover{
+          cursor: pointer;
+          background: #505656;
+          color: white;
+        }
+      }
+    } 
+  }
+}
