@@ -2,11 +2,9 @@ import React, { Component } from "react"
 import Card from 'react-bootstrap/Card'
 import "../styles/BooksDisplay.scss"
 
-const BooksDisplay = ({ BooksData, keyword }) => {
+const BooksDisplay = ({ BooksData }) => {
 
   if (BooksData.length === 0) {
-    console.log(BooksData)
-    console.log('找不到')
     return (
       <div className="loader-container">
         <div className="loader-group">
@@ -18,12 +16,9 @@ const BooksDisplay = ({ BooksData, keyword }) => {
       </div>
     )
   } else if (BooksData[0] === "查無資料") {
-    console.log(BooksData)
     return (
       <section className="unfound-container">
-        <div className="unfound">抱歉，你搜尋的關鍵字
-          <span>「{keyword}」</span>
-          查無書籍
+        <div className="unfound">抱歉，你搜尋的關鍵字查無書籍
         </div>
         <div>請試試輸入其他關鍵字</div>
       </section>

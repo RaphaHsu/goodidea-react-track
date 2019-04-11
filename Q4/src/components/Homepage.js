@@ -49,8 +49,9 @@ class Homepage extends Component {
   };
 
   render() {
-    const { booksData, filterBooksData, searchInput } = this.state;
+    const { booksData, filterBooksData } = this.state;
     return (
+
       <div>
         <div className="header">
           <div className="header-text">天瓏書局 書籍查詢</div>
@@ -59,7 +60,7 @@ class Homepage extends Component {
           <input className="search-bar" placeholder="請輸入書名" onChange={() => this.updateInput()}></input>
           <button onClick={() => this.filterData()}>搜尋</button>
         </div>
-        <BooksDisplay BooksData={this.state.filterBooksData} keyword={this.state.searchInput} />
+        <BooksDisplay BooksData={this.state.filterBooksData} />
       </div>
     );
   }
