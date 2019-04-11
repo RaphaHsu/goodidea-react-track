@@ -1,0 +1,22 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  font-size: 56px;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0;
+  background: linear-gradient(
+    to bottom,
+    white 0%,
+    white 60%,
+    yellow 60%,
+    yellow 100%
+  );
+}
