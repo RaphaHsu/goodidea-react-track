@@ -5,11 +5,11 @@
   align-content: center;
   justify-content: space-around;
   width: 300px;
+  animation-name: show-book;
   img {
     max-height: 250px;
   }
   .information-block {
-
     .name {
       // line-clamp: 2;
       box-orient: vertical;
@@ -25,5 +25,15 @@
       color: green;
       display: inline;
     }
+  }
+}
+
+@keyframes show-book {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }

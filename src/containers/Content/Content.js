@@ -10,7 +10,8 @@ export default class Header extends Component {
       tenlongBookDatas: [],
       searchOfItems: [],
       pageOfItems: [],
-      status: false
+      status: false,
+      pagingAction: ''
     };
   }
 
@@ -42,13 +43,48 @@ export default class Header extends Component {
     });
   }
 
+  onPagingChangeAction = (pagingAction) => {
+    this.setState({
+      pagingAction
+    });
+  }
+
+  showBookDatas = (pageOfItems, direction) => {
+    if (direction === 'backward') {
+      return pageOfItems.map((element, index) => (
+        <Book
+          image={element.image}
+          name={element.name}
+          originPrice={element.originPrice}
+          sellPrice={element.sellPrice}
+          link={element.link}
+          ISBN={element.ISBN}
+          key={element.ISBN}
+          delay={`${((index + (pageOfItems.length - (index + (index - 1)))) * 0.05)}s`}
+        />
+      ));
+    }
+    return pageOfItems.map((element, index) => (
+      <Book
+        image={element.image}
+        name={element.name}
+        originPrice={element.originPrice}
+        sellPrice={element.sellPrice}
+        link={element.link}
+        ISBN={element.ISBN}
+        key={element.ISBN}
+        delay={`${index * 0.05}s`}
+      />
+    ));
+  }
+
   componentDidMount() {
     this.getTenlongBookDatas();
   }
 
   render() {
     const {
-      tenlongBookDatas, searchOfItems, pageOfItems, status
+      tenlongBookDatas, searchOfItems, pageOfItems, status, pagingAction
     } = this.state;
     return (
       <React.Fragment>
@@ -56,20 +92,10 @@ export default class Header extends Component {
           <Search books={tenlongBookDatas} onChangeSearch={this.onSearchData} />
         </div>
         <div className="paging">
-          <Paging books={searchOfItems} onChangePage={this.onPagingData} />
+          <Paging books={searchOfItems} onChangePage={this.onPagingData} onChangeAction={this.onPagingChangeAction} />
         </div>
         <div className="books">
-          { (status === true && pageOfItems.length === 0) ? <p>Not Found!</p> : pageOfItems.map(element => (
-            <Book
-              image={element.image}
-              name={element.name}
-              originPrice={element.originPrice}
-              sellPrice={element.sellPrice}
-              link={element.link}
-              ISBN={element.ISBN}
-              key={element.ISBN}
-            />
-          ))}
+          { (status === true && pageOfItems.length === 0) ? <p>Not Found!</p> : this.showBookDatas(pageOfItems, pagingAction)}
         </div>
       </React.Fragment>
     );

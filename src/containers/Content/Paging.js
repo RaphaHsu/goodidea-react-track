@@ -6,18 +6,30 @@ export default class Paging extends Component {
     super(props);
     this.state = {
       pager: {},
-      initialPage: 1
+      initialPage: 1,
+      previousPage: 1
     };
+  }
+
+  setPagingAction = (action) => {
+    const {onChangeAction} = this.props;
+    onChangeAction(action);
   }
 
   setPage = (page) => {
     const {books, onChangePage} = this.props;
+    const {previousPage} = this.state;
     let {pager} = this.state;
 
     pager = this.getPager(books.length, page);
-
+    if (previousPage < page) {
+      this.setPagingAction('backward');
+    } else {
+      this.setPagingAction('forward');
+    }
     this.setState({
-      pager
+      pager,
+      previousPage: page
     });
 
     if (page < 1 || page > pager.totalPages) {
@@ -29,9 +41,9 @@ export default class Paging extends Component {
     onChangePage(pageOfItems);
   }
 
-  getPager = (totalItems, currentPage, pageSize) => {
+  getPager = (totalItems, currentPage) => {
     currentPage = currentPage || 1;
-    pageSize = pageSize || 10;
+    const pageSize = 10;
 
     const totalPages = Math.ceil(totalItems / pageSize);
 
@@ -70,14 +82,6 @@ export default class Paging extends Component {
     };
   }
 
-  // componentWillMount() {
-  //   const {books} = this.props;
-  //   const {initialPage} = this.state;
-  //   if (books && books.length) {
-  //     this.setPage(initialPage);
-  //   }
-  // }
-
   componentDidUpdate(prevProps) {
     const {books} = this.props;
     const {initialPage} = this.state;
@@ -95,31 +99,31 @@ export default class Paging extends Component {
       <React.Fragment>
         <div className="paging-block">
           <ul>
-            <li active={pager.currentPage === 1 ? "true" : null}>
-              <button type="button" onClick={() => this.setPage(1)}>
+            <li>
+              <button type="button" onClick={() => { this.setPage(1); this.setPagingAction('forward'); }} disabled={pager.currentPage === 1 ? true : null}>
                 <i className="fas fa-angle-double-left" />
               </button>
             </li>
-            <li active={pager.currentPage === 1 ? "true" : null}>
-              <button type="button" onClick={() => this.setPage(pager.currentPage - 1)}>
+            <li>
+              <button type="button" onClick={() => { this.setPage(pager.currentPage - 1); this.setPagingAction('forward'); }} disabled={pager.currentPage === 1 ? true : null}>
                 <i className="fas fa-chevron-left" />
               </button>
             </li>
             {pager.pages.map(page => (
               <li key={page} active={pager.currentPage === page ? "true" : null}>
-                <button type="button" onClick={() => this.setPage(page)}>
+                <button type="button" onClick={() => { this.setPage(page); }}>
                   {page}
                 </button>
               </li>
              ))
             }
-            <li active={pager.currentPage === pager.totalPages ? "true" : null}>
-              <button type="button" onClick={() => this.setPage(pager.currentPage + 1)}>
+            <li>
+              <button type="button" onClick={() => { this.setPage(pager.currentPage + 1); this.setPagingAction('backward'); }} disabled={pager.currentPage === pager.totalPages ? true : null}>
                 <i className="fas fa-chevron-right" />
               </button>
             </li>
-            <li active={pager.currentPage === pager.totalPages ? "true" : null}>
-              <button type="button" onClick={() => this.setPage(pager.totalPages)}>
+            <li>
+              <button type="button" onClick={() => { this.setPage(pager.totalPages); this.setPagingAction('backward'); }} disabled={pager.currentPage === pager.totalPages ? true : null}>
                 <i className="fas fa-angle-double-right" />
               </button>
             </li>
@@ -131,6 +135,7 @@ export default class Paging extends Component {
 
   static propTypes = {
     onChangePage: PropTypes.func.isRequired,
+    onChangeAction: PropTypes.func.isRequired,
     books: PropTypes.array.isRequired
   };
 }
