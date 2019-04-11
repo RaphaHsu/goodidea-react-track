@@ -8,16 +8,25 @@ const BooksDisplay = ({ BooksData, keyword }) => {
     console.log(BooksData)
     console.log('找不到')
     return (
-      <div>
-        loading
+      <div className="loader-container">
+        <div className="loader-group">
+          <div className="loader-bar"></div>
+          <div className="loader-bar"></div>
+          <div className="loader-bar"></div>
+        </div>
+        <div>Loading...</div>
       </div>
     )
   } else if (BooksData[0] === "查無資料") {
     console.log(BooksData)
     return (
-      <div>
-        找不到書籍
+      <section className="unfound-container">
+        <div className="unfound">抱歉，你搜尋的關鍵字
+          <span>「{keyword}」</span>
+          查無書籍
         </div>
+        <div>請試試輸入其他關鍵字</div>
+      </section>
     )
   } else {
     return (

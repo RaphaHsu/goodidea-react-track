@@ -59,7 +59,7 @@ class Homepage extends Component {
           <input className="search-bar" placeholder="請輸入書名" onChange={() => this.updateInput()}></input>
           <button onClick={() => this.filterData()}>搜尋</button>
         </div>
-        <BooksDisplay BooksData={this.state.filterBooksData} />
+        <BooksDisplay BooksData={this.state.filterBooksData} keyword={this.state.searchInput} />
       </div>
     );
   }
