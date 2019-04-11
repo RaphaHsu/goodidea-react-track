@@ -1,5 +1,17 @@
 .paging-block {
+  ul {
+    padding: 0;
+  }
   ul li{
     display: inline;
+  }
+  button {
+    padding: 6px;
+    background-color: #eeeeee;
+  }
+  button:hover {
+    color:#eeeeee;
+    background-color: #00adb5;
+    border-color: #222831;
   }
 }
