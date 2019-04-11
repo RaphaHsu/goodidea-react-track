@@ -19,9 +19,9 @@ export default class Search extends Component {
 
   render() {
     return (
-      <React.Fragment>
-        <input type="text" name="Text" onChange={this.toSearch} placeholder="book name or ISBN" />
-      </React.Fragment>
+      <div className="search-block">
+        <input className="search-block" type="text" name="Text" onChange={this.toSearch} placeholder="book name or ISBN" />
+      </div>
     );
   }
 
