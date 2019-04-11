@@ -18,7 +18,7 @@ const Book = ({
         <p className="name"><a href={link}>{name}</a></p>
         <p className="sell-price">NT${sellPrice}</p>
         <p className="origin-price">NT${originPrice}</p>
-        <p>ISBN：{ISBN}</p>
+        <p className="isbn">ISBN：{ISBN}</p>
       </div>
     </div>
   </React.Fragment>
