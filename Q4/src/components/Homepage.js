@@ -35,7 +35,7 @@ class Homepage extends Component {
 
   filterData() {
     let filterBooksData = this.state.booksData.filter((book) => {
-      return book.name.match(this.state.searchInput)
+      return book.name.match(this.state.searchInput.replace(/\s+/g, ""))
     })
     if (filterBooksData.length === 0) {
       this.setState({
@@ -49,7 +49,7 @@ class Homepage extends Component {
   };
 
   render() {
-    const { booksData, filterBooksData } = this.state;
+    const { booksData, filterBooksData, searchInput } = this.state;
     return (
 
       <div>
@@ -60,10 +60,10 @@ class Homepage extends Component {
           </div>
         </div>
         <div className="search-container">
-          <input className="search-bar" placeholder="請輸入書名" onChange={() => this.updateInput()}></input>
+          <input className="search-bar" placeholder="請輸入書名" onBlur={() => this.updateInput()}></input>
           <button onClick={() => this.filterData()}>搜尋</button>
         </div>
-        <BooksDisplay BooksData={this.state.filterBooksData} />
+        <BooksDisplay BooksData={this.state.filterBooksData} keyword={this.state.searchInput} />
       </div>
     );
   }
