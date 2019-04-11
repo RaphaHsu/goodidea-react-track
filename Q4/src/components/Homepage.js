@@ -54,7 +54,10 @@ class Homepage extends Component {
 
       <div>
         <div className="header">
-          <div className="header-text">天瓏書局 書籍查詢</div>
+          <div className="header-text">
+            <span>天瓏書局</span>
+            <span>書籍查詢</span>
+          </div>
         </div>
         <div className="search-container">
           <input className="search-bar" placeholder="請輸入書名" onChange={() => this.updateInput()}></input>
