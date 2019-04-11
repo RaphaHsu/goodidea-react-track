@@ -31,7 +31,7 @@ Book.propTypes = {
   sellPrice: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
   ISBN: PropTypes.string.isRequired,
-  delay: PropTypes.number.isRequired
+  delay: PropTypes.string.isRequired
 };
 // console.log('delay: ', this.props.delay);
 export default Book;
