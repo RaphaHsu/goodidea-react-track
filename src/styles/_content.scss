@@ -6,9 +6,13 @@
   display: flex;
   justify-content: center;
 }
-.books {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
+.books-block{
+  min-height: 800px;
+  .books {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
 }

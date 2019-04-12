@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { hot } from 'react-hot-loader/root';
-import Content from './Content/Content';
+import Content from './Content';
 
 import '../styles/index.scss';
 

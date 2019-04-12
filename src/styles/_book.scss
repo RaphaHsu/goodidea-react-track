@@ -7,10 +7,13 @@
   justify-content: space-around;
   width: 300px;
   animation-name: show-book;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
   background-color: #eeeeee;
   border: 0 solid;border-radius: 5px;
   img {
-    max-height: 200px;
+    max-height: 170px;
   }
   a {
     align-self: center;

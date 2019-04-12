@@ -8,10 +8,7 @@ const Book = ({
     <div
       className="book-block"
       style={{
-        animationDelay: delay,
-        animationDuration: '.5s',
-        animationFillMode: 'forwards',
-        opacity: 0
+        animationDelay: delay
       }}>
       <a href={link}><img src={image} alt={name} /></a>
       <div className="information-block">
@@ -33,5 +30,5 @@ Book.propTypes = {
   ISBN: PropTypes.string.isRequired,
   delay: PropTypes.string.isRequired
 };
-// console.log('delay: ', this.props.delay);
+
 export default Book;

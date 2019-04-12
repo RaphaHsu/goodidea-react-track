@@ -1,0 +1,21 @@
+.header-block {
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  width: 100%;
+  line-height: 50px;
+  position: fixed;
+  background-color: #00adb5;
+  z-index: 1;
+  .logo {
+    padding-left: 20px;
+    p {
+      color: #eeeeee;
+      font-size: 14pt;
+      margin: 0;
+    }
+  }
+  .search {
+    padding-right: 20px;
+  }
+}

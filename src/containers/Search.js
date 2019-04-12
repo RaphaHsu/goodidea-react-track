@@ -20,7 +20,8 @@ export default class Search extends Component {
   render() {
     return (
       <div className="search-block">
-        <input className="search-block" type="text" name="Text" onChange={this.toSearch} placeholder="book name or ISBN" />
+        <i className="search-icon fas fa-search" />
+        <input type="text" name="Text" onChange={this.toSearch} placeholder="book name or ISBN" />
       </div>
     );
   }

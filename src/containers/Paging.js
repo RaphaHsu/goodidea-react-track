@@ -92,7 +92,7 @@ export default class Paging extends Component {
 
   render() {
     const {pager} = this.state;
-    if (!pager.pages || pager.pages.length === 0) {
+    if (!pager.pages || pager.pages.length === 0 || pager.pages.length === 1) {
       return null;
     }
     return (

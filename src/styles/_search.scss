@@ -1,5 +1,17 @@
 .search-block {
+  display: flex;
+  align-items: center;
+  .search-icon {
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 20px;
+    background-color: #febd69;
+    color: #222831;
+  }
   input {
+    width:150px;
     line-height: 15px;
     text-indent: 8px;
     padding: 6px 10px 6px 0;

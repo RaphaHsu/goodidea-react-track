@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
+import Header from './Header';
 import Book from './Book';
 import Paging from './Paging';
-import Search from './Search';
 
-export default class Header extends Component {
+export default class Content extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -88,14 +88,14 @@ export default class Header extends Component {
     } = this.state;
     return (
       <React.Fragment>
-        <div className="search">
-          <Search books={tenlongBookDatas} onChangeSearch={this.onSearchData} />
+        <Header books={tenlongBookDatas} onChangeSearch={this.onSearchData} />
+        <div className="books-block">
+          <div className="books">
+            { (status === true && pageOfItems.length === 0) ? <p>Not Found!</p> : this.showBookDatas(pageOfItems, pagingAction)}
+          </div>
         </div>
         <div className="paging">
           <Paging books={searchOfItems} onChangePage={this.onPagingData} onChangeAction={this.onPagingChangeAction} />
-        </div>
-        <div className="books">
-          { (status === true && pageOfItems.length === 0) ? <p>Not Found!</p> : this.showBookDatas(pageOfItems, pagingAction)}
         </div>
       </React.Fragment>
     );
