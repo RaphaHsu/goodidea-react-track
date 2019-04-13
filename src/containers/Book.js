@@ -10,9 +10,9 @@ const Book = ({
       style={{
         animationDelay: delay
       }}>
-      <a href={link}><img src={image} alt={name} /></a>
+      <a href={link} title={name}><img src={image} alt={name} /></a>
       <div className="information-block">
-        <p className="name"><a href={link}>{name}</a></p>
+        <p className="name"><a href={link}>{`${name.substring(0, 15)}...`}</a></p>
         <p className="sell-price">NT${sellPrice}</p>
         <p className="origin-price">NT${originPrice}</p>
         <p className="isbn">ISBN：{ISBN}</p>

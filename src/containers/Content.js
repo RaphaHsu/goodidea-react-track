@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Header from './Header';
 import Book from './Book';
 import Paging from './Paging';
+import Search from './Search';
 
 export default class Content extends Component {
   constructor(props) {
@@ -88,7 +89,11 @@ export default class Content extends Component {
     } = this.state;
     return (
       <React.Fragment>
-        <Header books={tenlongBookDatas} onChangeSearch={this.onSearchData} />
+        <Header>
+          <div className="search">
+            <Search books={tenlongBookDatas} onChangeSearch={this.onSearchData} />
+          </div>
+        </Header>
         <div className="books-block">
           <div className="books">
             { (status === true && pageOfItems.length === 0) ? <p>Not Found!</p> : this.showBookDatas(pageOfItems, pagingAction)}

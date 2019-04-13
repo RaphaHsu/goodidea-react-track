@@ -3,7 +3,7 @@
   padding: 15px 10px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-around;
   width: 300px;
   animation-name: show-book;
@@ -13,7 +13,7 @@
   background-color: #eeeeee;
   border: 0 solid;border-radius: 5px;
   img {
-    max-height: 170px;
+    max-height: 220px;
   }
   a {
     align-self: center;
@@ -25,9 +25,10 @@
     text-decoration: underline;
   }
   .information-block {
+    margin-top: 10px;
+    padding-top: 10px;
     .name {
-      // line-clamp: 2;
-      box-orient: vertical;
+      margin: 0px;
       white-space: normal;
     }
     .origin-price {
@@ -55,5 +56,11 @@
 
   to {
     opacity: 1;
+  }
+}
+
+@media (max-width: 576px) {
+  .book-block {
+    margin-bottom: 20px;
   }
 }

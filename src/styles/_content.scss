@@ -16,3 +16,11 @@
     flex-wrap: wrap;
   }
 }
+
+@media (max-width: 576px) {
+  .books-block{
+    .books {
+      margin-top: 90px;
+    }
+  }
+}

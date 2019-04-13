@@ -10,12 +10,32 @@
   .logo {
     padding-left: 20px;
     p {
+      display: inline;
       color: #eeeeee;
       font-size: 14pt;
       margin: 0;
     }
+    .x-logo {
+      color: #222831;
+    }
   }
   .search {
     padding-right: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .header-block {
+    padding: 10px 0 10px;
+    line-height: 15px;
+    .logo {
+      p {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        display: block;
+        font-size: 12pt;
+      }
+    }
   }
 }
