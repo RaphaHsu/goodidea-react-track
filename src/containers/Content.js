@@ -96,8 +96,9 @@ export default class Content extends Component {
         </Header>
         <div className="books-block">
           <div className="books">
-            { (status === true && pageOfItems.length === 0) ? <p>Not Found!</p> : this.showBookDatas(pageOfItems, pagingAction)}
+            { (status === true && pageOfItems.length === 0) ? null : this.showBookDatas(pageOfItems, pagingAction)}
           </div>
+          { (status === true && pageOfItems.length === 0) ? <div className="no-books"><i className="far fa-grin-tongue not-found-icon" /><p>Book Not Found!</p></div> : null }
         </div>
         <div className="paging">
           <Paging books={searchOfItems} onChangePage={this.onPagingData} onChangeAction={this.onPagingChangeAction} />
