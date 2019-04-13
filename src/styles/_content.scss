@@ -1,0 +1,48 @@
+.search {
+  display: flex;
+  justify-content: center;
+}
+.paging {
+  display: flex;
+  justify-content: center;
+}
+.books-block{
+  min-height: 800px;
+  .books {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .no-books {
+    margin-top: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .not-found-icon {
+      color: #eeeeee;
+      font-size: 100px;
+    }
+    p {
+      font-size: 50px;
+      color:#eeeeee;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .books-block{
+    min-height: 400px;
+    .books {
+      margin-top: 90px;
+    }
+    .no-books {
+      margin-top: 100px;
+      p {
+        font-size: 30px;
+      }
+    }
+  }
+}

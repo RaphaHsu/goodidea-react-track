@@ -1,0 +1,21 @@
+.paging-block {
+  margin-top: -15px;
+  ul {
+    padding: 0;
+  }
+  ul li{
+    display: inline;
+  }
+  button {
+    padding: 6px;
+    background-color: #eeeeee;
+    outline: none;
+    border: 1px solid #222831;
+    border-radius: 2px;
+  }
+  button:hover {
+    color:#eeeeee;
+    background-color: #00adb5;
+    border-color: #393e46;
+  }
+}
