@@ -6,6 +6,8 @@
 # Q4練習
 該練習直接使用[simple_react_startkit](https://github.com/ReactMaker/simple_react_startkit)來進行環境建置
 
++ [DEMO](https://PenguinRun.github.io/goodidea-react-track)
+
 # Simple React Startkit
 
 This is a simple react boilerplate, without complex dependencies(eg. redux or router), this project can help you start the react project in seconds.
