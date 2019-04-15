@@ -11,12 +11,12 @@ class searchComponent extends Component {
     };
   }
 
-  filterData(e) {
+  filterData= (e) => {
     const { books, onChangeSearch } = this.props;
     let { searchInput } = this.state;
     searchInput = e.target.value;
     const filterResult = books.filter(
-      book => book.name.indexOf(searchInput) !== -1
+      book => book.name.toLowerCase().indexOf(searchInput) !== -1
         || book.ISBN.indexOf(searchInput) !== -1
     );
     onChangeSearch(filterResult);

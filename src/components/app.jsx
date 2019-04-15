@@ -10,17 +10,19 @@ class App extends Component {
     this.state = {
       booksData: [],
       searchItems: [],
+      getBookList: false
     };
   }
 
   getBooksList = () => {
-    fetch("https://bookshelf.goodideas-studio.com/api")
+    fetch("https://bookshelf.goodideas-studio.com/api/")
       .then(response => response.json())
       .then((data) => {
         const booksList = data.list;
         this.setState({
           booksData: booksList,
-          searchItems: booksList
+          searchItems: booksList,
+          getBookList: true
         });
       })
       .catch(error => console.log("Opps", error));
@@ -30,18 +32,24 @@ class App extends Component {
     this.setState({
       searchItems
     });
-  }
+  };
 
   componentDidMount() {
     this.getBooksList();
   }
 
   render() {
-    const {booksData, searchItems} = this.state;
+    const { booksData, searchItems, getBookList } = this.state;
+    let showProducts = "";
+    if (getBookList === true) {
+      showProducts = <Products searchItems={searchItems} />;
+    } else {
+      showProducts = "Loading...";
+    }
     return (
       <div>
         <Search books={booksData} onChangeSearch={this.filterbooks} />
-        <Products searchItems={searchItems} />
+        {showProducts}
       </div>
     );
   }
