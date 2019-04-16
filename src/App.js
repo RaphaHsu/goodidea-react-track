@@ -3,6 +3,9 @@ import { hot } from "react-hot-loader";
 import Header from "./Header.js"
 import "./css/enviroment.css";
 import "./css/header.css";
+import leftImg from './img/left.png';
+import middleImg from './img/middle.png';
+import rightImg from './img/right.png';
 
 class App extends Component {
   render() {
@@ -22,9 +25,9 @@ class App extends Component {
           <h2>year round</h2>
           <hr width="3%" />
           <h3>must have items</h3>
-          <img src="img/left.png" alt="" />
-          <img src="img/middle.png" alt="" />
-          <img src="img/right.png" alt="" />
+          <img src={leftImg} alt="" />
+          <img src={middleImg} alt="" />
+          <img src={rightImg} alt="" />
         </section>
 
         <footer>

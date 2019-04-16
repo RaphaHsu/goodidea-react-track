@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { hot } from "react-hot-loader";
 import "./css/enviroment.css";
 import "./css/header.css";
+import img from './img/bag.png';
 
 class Header extends Component {
   render() {
@@ -16,7 +17,7 @@ class Header extends Component {
           <li><a href="#stockists">stockists</a></li>
           <li>
             <a href="#shop_car" id="shop-car">
-              <img src="img/bag.png" alt="shop car" />
+              <img src={ img } alt="shop car" />
             </a>
           </li>
         </ul>
