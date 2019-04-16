@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { hot } from "react-hot-loader";
 import Header from "./component/Header.js"
+import Banner from "./component/Banner.js"
 import "./css/enviroment.css";
 import "./css/header.css";
 import leftImg from './img/left.png';
@@ -12,12 +13,8 @@ class App extends Component {
     return (
       <body>
         <Header />
-        <section id="cover">
-          <div class="shop">
-            <h1>fall & winter</h1>
-            <button>shop now</button>
-          </div>
-        </section>
+        <Banner />
+        
         
         <h4 class="waistband">free shipping worlwide</h4>
 
