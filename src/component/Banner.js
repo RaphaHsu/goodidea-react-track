@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import { hot } from "react-hot-loader";
 import "../css/enviroment.css";
-import "../css/header.css";
-import img from '../img/bag.png';
+import "../css/main.css";
 
 class Banner extends Component {
   render() {

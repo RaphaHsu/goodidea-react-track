@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { hot } from "react-hot-loader";
 import "../css/enviroment.css";
-import "../css/header.css";
+import "../css/main.css";
 import img from '../img/bag.png';
 
 class Header extends Component {

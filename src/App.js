@@ -3,7 +3,7 @@ import { hot } from "react-hot-loader";
 import Header from "./component/Header.js"
 import Banner from "./component/Banner.js"
 import "./css/enviroment.css";
-import "./css/header.css";
+import "./css/main.css";
 import leftImg from './img/left.png';
 import middleImg from './img/middle.png';
 import rightImg from './img/right.png';
