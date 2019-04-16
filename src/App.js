@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { hot } from "react-hot-loader";
-import Header from "./Header.js"
+import Header from "./component/Header.js"
 import "./css/enviroment.css";
 import "./css/header.css";
 import leftImg from './img/left.png';
