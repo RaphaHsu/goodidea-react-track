@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { hot } from "react-hot-loader/root";
-
 import Search from "./search";
 import Products from "./products";
 
@@ -40,16 +39,16 @@ class App extends Component {
 
   render() {
     const { booksData, searchItems, getBookList } = this.state;
-    let showProducts = "";
-    if (getBookList === true) {
-      showProducts = <Products searchItems={searchItems} />;
-    } else {
-      showProducts = "Loading...";
-    }
     return (
-      <div>
+      <div className="container">
         <Search books={booksData} onChangeSearch={this.filterbooks} />
-        {showProducts}
+        {getBookList === true ? (
+          <div className="row">
+            <Products searchItems={searchItems} />
+          </div>
+        ) : (
+          "Loading..."
+        )}
       </div>
     );
   }
