@@ -47,7 +47,9 @@ class App extends Component {
             <Products searchItems={searchItems} />
           </div>
         ) : (
-          "Loading..."
+          <h2 className="text-white">
+            Loading...
+          </h2>
         )}
       </div>
     );

@@ -11,7 +11,7 @@ class searchComponent extends Component {
     };
   }
 
-  filterData= (e) => {
+  filterData = (e) => {
     const { books, onChangeSearch } = this.props;
     let { searchInput } = this.state;
     searchInput = e.target.value;
@@ -20,18 +20,25 @@ class searchComponent extends Component {
         || book.ISBN.indexOf(searchInput) !== -1
     );
     onChangeSearch(filterResult);
-  }
+  };
 
   render() {
     return (
-      <div>
-        <FontAwesomeIcon icon={faSearch} />
-        <input
-          type="text"
-          name="Text"
-          onChange={this.filterData}
-          placeholder="書籍名稱 or ISBN"
-        />
+      <div id="searchComponent">
+        <h1 className="text-white">天瓏書局 X 好想工作室</h1>
+        <div className="input-group">
+          <div className="input-group-prepend">
+            <span className="input-group-text">
+              <FontAwesomeIcon icon={faSearch} />
+            </span>
+          </div>
+          <input
+            type="text"
+            name="Text"
+            onChange={this.filterData}
+            placeholder="書籍名稱 or ISBN"
+          />
+        </div>
       </div>
     );
   }
