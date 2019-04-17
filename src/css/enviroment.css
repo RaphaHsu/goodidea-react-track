@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  color: #c9c9c9;
+  font-weight: bold;
+}
+
+.clearfix::after {
+  content: ' ';
+  display: table;
+  clear: both;
+}
