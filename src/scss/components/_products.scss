@@ -1,0 +1,12 @@
+.items{
+  margin: 1em 0;
+}
+.book-title{
+  overflow : hidden;
+  text-overflow : ellipsis;
+  white-space : nowrap;
+}
+
+.originPrice{
+  text-decoration: line-through;
+}
