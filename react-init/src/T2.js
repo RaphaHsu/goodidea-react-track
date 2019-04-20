@@ -19,7 +19,7 @@ class T2 extends React.Component {
             <li>Customer Care</li>
             <li>Stockists</li>
           </ul>
-          <img class="view_shopping_cart" src="img/bag.png" alt="view_shopping_cart"/>
+          <img class="view_shopping_cart" src={require('./assets/img/bag.png')} alt="view_shopping_cart"/>
         </div>
       </div>
       <div id="news">
@@ -41,9 +41,9 @@ class T2 extends React.Component {
             <h2>Must Have Items</h2>
           </div>
           <ul id="sale_img_list" class="horizontal_list_initial">
-            <li><img src="img/left.png"/></li>
-            <li><img src="img/middle.png"/></li>
-            <li><img src="img/right.png"/></li>
+            <li><img src={require('./assets/img/left.png')}/></li>
+            <li><img src={require('./assets/img/middle.png')}/></li>
+            <li><img src={require('./assets/img/right.png')}/></li>
           </ul>
         </div>
       </div>

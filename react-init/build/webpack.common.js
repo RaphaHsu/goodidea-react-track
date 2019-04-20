@@ -14,6 +14,14 @@ module.exports = {
       test: /\.m?js$/,
       exclude: /(node_modules)/,
       loader: 'babel-loader'
+    }, {
+      test: /\.(png|jpg|gif)$/i,
+      use: [{
+        loader: 'url-loader',
+        options: {
+          limit: 8192
+        }
+      }]
     }]
   },
   plugins: [
