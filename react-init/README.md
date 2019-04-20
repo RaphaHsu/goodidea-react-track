@@ -64,3 +64,20 @@ npm install --save-dev babel-loader @babel/core @babel/preset-env @babel/preset-
 }
 ```
 ref: https://babeljs.io/docs/en/babel-preset-react
+
+# Q3 練習
+
+因為有 JSX ，HTML 可以直接貼上，無需大幅度修改
+
+**修改**
+
+加入 css:
+
+- 安裝 css-loader, style-loader, 設定 webpack config file
+- 暫時註解 css 的圖片載入
+
+加入圖片:
+
+- 安裝 url-loader, file-loader, 設定 webpack config file
+- 恢復 CSS 的圖片載入
+- 修改 HTML `<img src="path">` -> `<img src={require("path")}`

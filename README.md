@@ -25,3 +25,7 @@
 
 - **my-app** 用 CRA (npx create-react-app my-app) 做的初始專案。CRA 執行完，執行 `eject` 之後的結果
 - **react-init** 用一步一步建立 webpack + babel 建立可執行 react 的環境。
+
+## Q3 分支
+
+- **react-init** Q3 分支的實作在此資料夾
