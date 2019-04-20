@@ -1,5 +1,11 @@
 import React from 'react';
 
+import './assets/css/footer.css'
+import './assets/css/index.css'
+import './assets/css/navigation.css'
+import './assets/css/news.css'
+import './assets/css/sale.css'
+
 class T2 extends React.Component {
   render() {
     return (<div>
