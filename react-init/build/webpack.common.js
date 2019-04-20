@@ -2,6 +2,11 @@ const path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, '../src/')
+    }
+  },
   module: {
     rules: [{
       test: /\.css$/,
