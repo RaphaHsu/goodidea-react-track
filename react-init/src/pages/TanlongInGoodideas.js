@@ -2,13 +2,13 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 import axios from 'axios';
 
-import Book from '../components/Book'
+import Book from '../components/Book';
 
 function fetchTanlongBooks () {
   return axios.get(`https://bookshelf.goodideas-studio.com/api`)
   .then((res) => {
     return res.data
-  })
+  });
 }
 
 function debounce(func, wait = 20, immediate = true) {
@@ -68,7 +68,7 @@ class TanlongInGoodideas extends React.Component {
       天瓏書局 x 好想工作室
       <div className="books">
         {this.state.books.slice(0, this.state.show).map((book) => (<Book key={book.ISBN.toString()} data={book}></Book>))}
-      </div>
+      // </div>
     </div>);
   }
 }
