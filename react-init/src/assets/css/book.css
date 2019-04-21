@@ -1,0 +1,57 @@
+.book {
+  vertical-align: top;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px 10px;
+  border-radius: 10px;
+  display: inline-block;
+  /* position: absolute;
+  top: 100%; */
+}
+.book:hover {
+  background-color: #d7e6ff;
+}
+.book img {
+  width: 40%;
+  height: auto;
+}
+.book .price, .book img {
+  display: inline-block;
+  vertical-align: bottom;
+}
+.book .isbn {
+  font-size: 8px;
+}
+.book .name {
+  font-size: 14px;
+  color: #63a35c;
+}
+.book .origin-price {
+  text-decoration: line-through;
+  font-size: 12px;
+}
+.book .sell-price {
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+.book a {
+  display: block;
+  color: #337ab7;
+  text-decoration: none;
+}
+
+
+@media screen and (min-width: 720px) {
+  .book {
+    width: 25%;
+  }
+  .book img {
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+  .book .price {
+    display: block;
+  }
+}
