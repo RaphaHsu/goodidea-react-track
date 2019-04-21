@@ -7,7 +7,7 @@ function Book(props) {
   function isSell() {
     return (props.data.originPrice !== props.data.sellPrice)
   }
-  console.log(props.data);
+
   return (<div className="book">
     <a href={props.data.link} target="_blank">
       <div className="name">{props.data.name}</div>
