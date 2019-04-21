@@ -81,3 +81,7 @@ ref: https://babeljs.io/docs/en/babel-preset-react
 - 安裝 url-loader, file-loader, 設定 webpack config file
 - 恢復 CSS 的圖片載入
 - 修改 HTML `<img src="path">` -> `<img src={require("path")}`
+
+移除 Warning: Invalid DOM property
+
+- class -> className in JSX
