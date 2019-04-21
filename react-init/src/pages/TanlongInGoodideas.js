@@ -32,7 +32,9 @@ class TanlongInGoodideas extends React.Component {
   render() {
     return (<div>
       天瓏書局 x 好想工作室
-      <Book data={this.state.books[0]} />
+      <div className="books">
+        {this.state.books.slice(0, 8).map((book) => <Book data={book}></Book>)}
+      </div>
     </div>);
   }
 }
