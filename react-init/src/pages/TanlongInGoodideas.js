@@ -31,17 +31,19 @@ class TanlongInGoodideas extends React.Component {
     super(props);
     this.state = {
       updateAt: 0,
-      books: [{
+      filtedBooks: [{
         image: '',
         ISBN: ''
       }],
+      books: [],
       show: 8
     }
 
     fetchTanlongBooks().then((res) => {
       this.setState({
         updateAt: new Date(res.updateAt),
-        books: res.list
+        books: res.list,
+        filtedBooks: res.list
       })
     })
     this.infiniteLoading = this.infiniteLoading.bind(this);
@@ -63,11 +65,19 @@ class TanlongInGoodideas extends React.Component {
     document.addEventListener('scroll', debounce(this.infiniteLoading, 20, false));
   }
 
+  filter (e) {
+    const keyword = e.currentTarget.value
+    this.setState({
+      filtedBooks: this.state.books.filter(item => !!keyword && item.name.includes(keyword))
+    })
+  }
+
   render() {
     return (<div>
       天瓏書局 x 好想工作室
+      <div>查詢書名: <input type="text" onChange={(e) => this.filter(e)}/></div>
       <div className="books">
-        {this.state.books.slice(0, this.state.show).map((book) => (<Book key={book.ISBN.toString()} data={book}></Book>))}
+        {this.state.filtedBooks.slice(0, this.state.show).map((book) => (<Book key={book.ISBN.toString()} data={book}></Book>))}
       // </div>
     </div>);
   }
