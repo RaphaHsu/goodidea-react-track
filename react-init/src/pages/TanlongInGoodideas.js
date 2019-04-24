@@ -11,20 +11,6 @@ function fetchTanlongBooks () {
   });
 }
 
-function debounce(func, wait = 20, immediate = true) {
-  var timeout;
-  return function() {
-    var context = this, args = arguments;
-    var later = function() {
-      timeout = null;
-      if (!immediate) func.apply(context, args);
-    };
-    var callNow = immediate && !timeout;
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-    if (callNow) func.apply(context, args);
-  };
-}
 
 class TanlongInGoodideas extends React.Component {
   constructor(props) {
@@ -49,6 +35,22 @@ class TanlongInGoodideas extends React.Component {
     this.infiniteLoading = this.infiniteLoading.bind(this);
   }
 
+
+  debounce(func, wait = 20, immediate = true) {
+    var timeout;
+    return function() {
+      var context = this, args = arguments;
+      var later = function() {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    };
+  }
+
   infiniteLoading (e) {
     const currTotal = !this.state.show || this.state.show;
     const maxTotal = !this.state.books || this.state.books.length;
@@ -62,20 +64,20 @@ class TanlongInGoodideas extends React.Component {
   }
 
   componentDidMount() {
-    document.addEventListener('scroll', debounce(this.infiniteLoading, 20, false));
+    document.addEventListener('scroll', this.debounce(this.infiniteLoading, 20, false));
   }
 
-  filter (e) {
+  filter = (e) => {
     const keyword = e.currentTarget.value
     this.setState({
-      filtedBooks: this.state.books.filter(item => !!keyword && item.name.includes(keyword))
+      filtedBooks: this.state.books.filter(item => !!keyword && item.name.includes(keyword) || !keyword)
     })
   }
 
   render() {
     return (<div>
-      天瓏書局 x 好想工作室
-      <div>查詢書名: <input type="text" onChange={(e) => this.filter(e)}/></div>
+      <h1>天瓏書局 x 好想工作室</h1>
+      <div>查詢書名: <input type="text" onChange={this.filter}/></div>
       <div className="books">
         {this.state.filtedBooks.slice(0, this.state.show).map((book) => (<Book key={book.ISBN.toString()} data={book}></Book>))}
       // </div>
