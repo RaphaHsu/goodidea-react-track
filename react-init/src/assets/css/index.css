@@ -1,0 +1,28 @@
+body {
+    font-family: sans-serif, monospace;
+    margin: 0;
+}
+
+.horizontal_list_initial > li {
+    display: inline-block;
+}
+
+.horizontal_list_initial {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.text_center {
+    text-align: center;
+}
+
+.clear_fix {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.debug_css {
+    border: 1px red dashed;
+}

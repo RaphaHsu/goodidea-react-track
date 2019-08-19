@@ -17,3 +17,15 @@
 - 每週一抓起碼三則上週 PR 來討論，評估優缺，對事不對人
 - 有問題歡迎來問，但建議你先整理好問題和解說 (整理問題的過程，有時就回答你自己問題了)
 
+## Chris
+
+切換到 chris 分支
+
+### 目錄解釋
+
+- **my-app** 用 CRA (npx create-react-app my-app) 做的初始專案。CRA 執行完，執行 `eject` 之後的結果
+- **react-init** 用一步一步建立 webpack + babel 建立可執行 react 的環境。
+
+## Q3 分支
+
+- **react-init** Q3 分支的實作在此資料夾
